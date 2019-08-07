@@ -1,0 +1,205 @@
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>BAC</title>
+		<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="bac-logo.css">
+		<link rel="stylesheet" type="text/css" href="general-styles.css">
+		<script src="https://kit.fontawesome.com/65e5c6d42f.js"></script>
+		<style>
+			#board-container, #subscribe-container {
+				margin: 40px auto;
+			}
+
+
+		</style>
+  </head>
+  <body>
+    <div id="navbar">
+
+		<!-- CENTER LOGO -->
+		<a id="center-logo" class="container fs-4" href="./index.html">
+			<div class="B">
+				<div class="b-top">
+					<div class="b-rect"></div>
+					<div class="b-circle"></div>
+				</div>
+				<div class="line"></div>
+				<div class="b-lower">
+					<div class="b-rect"></div>
+					<div class="b-circle"></div>
+				</div>
+			</div>
+
+			<div class="A">
+				<div class="a-left-line"></div>
+				<div class="line"></div>
+				<div class="a-right-line"></div>
+			</div>
+
+			<div class="C">
+				<div class="C-inner"></div>
+				<div class="C-whitespace"></div>
+				<div class="line"></div>
+			</div>
+		</a>
+
+			<div id="logo-text">
+				<span class="charcoal"> BUSINESS </span>
+				<span class="green"> ANALYTICS </span>
+				<span class="charcoal"> CLUB </span>
+			</div>
+
+			<div id="hamburger-menu">
+				<div class="h-line"></div>
+				<div class="h-line"></div>
+				<div class="h-line"></div>
+			</div>
+
+			<div id="nav-items">
+					<a class="navbar-item" href="./calendar.html" id="calendar-tab">Calendar</a>
+					<a class="navbar-item" href="./insightteams.html" id="insight-team-tab">Insight Teams</a>
+					<a class="navbar-item" href="./membership.html" id="membership-tab">Membership</a>
+					<a class="navbar-item" href="./bacsquared.html" id="bac-squared-tab">BAC<sup>2</sup> Conference</a>
+				</div>
+		</div>
+		<div id="body">
+
+			<div class="content-block">
+				<div class="content-block-header">
+					Announcements
+				</div>
+				<div class="content-block-body">
+					<img src="./businessman.svg" class="content-icon">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu justo sit amet lacus molestie tincidunt eget vel ex.
+					<div class="dotted-underline"></div>
+					Cras scelerisque, est ac finibus porta, neque nulla laoreet purus, ac elementum nisi diam sit amet metus. Suspendisse suscipit purus vel tempor malesuada. 
+					<div class="dotted-underline"></div>
+					Integer in nisl suscipit quam commodo vehicula. Sed consectetur tristique neque sit amet eleifend. Sed erat mi, ultricies ut maximus et, pulvinar at nibh.
+				</div>
+			</div>
+
+			<div id="board-container">
+				<div class="main-header"> Executive Board </div>
+				<div class="main-underline-container">
+					<div class="main-header-underline"></div>
+				</div>
+				
+				<div class="members">
+
+					<div class="member">
+						<img class="member-img" src="./stock_photo.jpg">
+						<div class="member-content">
+							<div class="member-info">
+								<div class="member-name">
+									[Member Name]
+								</div>
+								<br>
+								<div class="member-bio">
+									[Member Title]
+									<br>
+									[Member School Info]
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="member">
+						<img class="member-img" src="./stock_photo.jpg">
+						<div class="member-content">
+							<div class="member-info">
+								<div class="member-name">
+									[Member Name]
+								</div>
+								<br>
+								<div class="member-bio">
+									[Member Title]
+									<br>
+									[Member School Info]
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="member">
+						<img class="member-img" src="./stock_photo.jpg">
+						<div class="member-content">
+							<div class="member-info">
+								<div class="member-name">
+									[Member Name]
+								</div>
+								<br>
+								<div class="member-bio">
+									[Member Title]
+									<br>
+									[Member School Info]
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="member">
+						<img class="member-img" src="./stock_photo.jpg">
+						<div class="member-content">
+							<div class="member-info">
+								<div class="member-name">
+									[Member Name]
+								</div>
+								<br>
+								<div class="member-bio">
+									[Member Title]
+									<br>
+									[Member School Info]
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<form id="subscribe-container" onsubmit="handleEmailSubmit(event)">
+				<input placeholder="Enter Email..." id="subscribe-input">
+				<div id="subscribe-btn">
+					<span>SUBSCRIBE</span>
+				</div>
+				<div id="thanks-sub">
+					Thank you! Please check your email to confirm your subscription.
+				</div>
+			</form>
+
+			<div class="content-block">
+				<div class="content-block-header">
+					Mission Statement
+				</div>
+				<div class="content-block-body">
+					<img src="./target.svg" class="content-icon">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu justo sit amet lacus molestie tincidunt eget vel ex.
+				</div>
+			</div>
+
+			<div id="footer">
+				<div id="footer-content">
+					<div id="footer-links">
+						<a href="https://facebook.com/SternBAC/" class="footer-link" target="_blank">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+						<a href="mailto:analytic@stern.nyu.edu" class="footer-link">
+							<i class="far fa-envelope"></i>
+						</a>
+					</div>
+
+					<div id="copyright">
+						&copy; Business Analytics Club
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<script src="general-scripts.js"></script>
+		<script src="homepage-scripts.js"></script>
+  </body>
+</html>

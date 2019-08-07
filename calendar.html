@@ -1,0 +1,221 @@
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>BAC - Calendar</title>
+		<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="bac-logo.css">
+		<link rel="stylesheet" type="text/css" href="general-styles.css">
+        <script src="https://kit.fontawesome.com/65e5c6d42f.js"></script>
+        
+        <style>
+            #calendar {
+                margin: 40px 0;
+            }
+
+            #calendar-content {
+                background-color: #374C60;
+                box-sizing: border-box;
+                padding: 10px;
+                min-height: 150px;
+            }
+
+            .semester {
+                width:80%;
+                background-color: #eeeeee;
+                border-radius: 5px;
+                margin: 10px auto;
+            }
+
+            .semester-icon, .semester-text {
+                display: inline-block;
+                font-size: 20px;
+                line-height: 30px;
+                height:30px;
+                margin: 0 10px;
+
+            }
+
+            .pressed-semester {
+                background-color: #1AB999;
+            }
+
+            .months{ /* Needed for animation effects via JS */
+                max-height: 0px;
+                overflow: hidden;
+                width:100%;
+                box-sizing: border-box;
+            }
+
+            .month {
+                height: 30px;
+                border-top: 2px solid #1AB999;
+                padding-left: 30px;
+                background-color: #eeeeee;
+                box-sizing: border-box;
+                line-height: 28px;
+            }
+            .month:nth-child(4n){
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+
+        
+        </style>
+  </head>
+  <body>
+    <div id="navbar">
+
+		<!-- CENTER LOGO -->
+		<a id="center-logo" class="container fs-4" href="./index.html">
+			<div class="B">
+				<div class="b-top">
+					<div class="b-rect"></div>
+					<div class="b-circle"></div>
+				</div>
+				<div class="line"></div>
+				<div class="b-lower">
+					<div class="b-rect"></div>
+					<div class="b-circle"></div>
+				</div>
+			</div>
+
+			<div class="A">
+				<div class="a-left-line"></div>
+				<div class="line"></div>
+				<div class="a-right-line"></div>
+			</div>
+
+			<div class="C">
+				<div class="C-inner"></div>
+				<div class="C-whitespace"></div>
+				<div class="line"></div>
+			</div>
+		</a>
+
+			<div id="logo-text">
+				<span class="charcoal"> BUSINESS </span>
+				<span class="green"> ANALYTICS </span>
+				<span class="charcoal"> CLUB </span>
+			</div>
+
+			<div id="hamburger-menu">
+				<div class="h-line"></div>
+				<div class="h-line"></div>
+				<div class="h-line"></div>
+			</div>
+
+			<div id="nav-items">
+					<a class="navbar-item" href="./calendar.html" id="calendar-tab">Calendar</a>
+					<a class="navbar-item" href="./insightteams.html" id="insight-team-tab">Insight Teams</a>
+					<a class="navbar-item" href="./membership.html" id="membership-tab">Membership</a>
+					<a class="navbar-item" href="./bacsquared.html" id="bac-squared-tab">BAC<sup>2</sup> Conference</a>
+				</div>
+		</div>
+		<div id="body">
+
+			<div class="content-block">
+				<div class="content-block-header">
+					Upcoming Events
+				</div>
+				<div class="content-block-body">
+					<img src="./weekly-calendar.svg" class="content-icon">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu justo sit amet lacus molestie tincidunt eget vel ex.
+				</div>
+            </div>
+            
+            <div id="calendar">
+                <div class="main-header"> Navigate By Semester </div>
+                <div class="main-underline-container">
+                    <div class="main-header-underline"></div>
+                </div>
+
+                <div id="calendar-content">
+                    <div class="semester" id="fall2018">
+                        <div class="semester-icon"> + </div>
+                        <div class="semester-text"> Fall 2018 </div>
+                        <div class="months">
+                            <div class="month">September</div>
+                            <div class="month">October</div>
+                            <div class="month">November</div>
+                            <div class="month">December</div>
+                        </div>
+                    </div>
+
+                    <div class="semester" id="spring2019">
+                        <div class="semester-icon"> + </div>
+                        <div class="semester-text"> Spring 2019 </div>
+                        <div class="months">
+                            <div class="month">February</div>
+                            <div class="month">March</div>
+                            <div class="month">April</div>
+                            <div class="month">May</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+			<div id="footer">
+				<div id="footer-content">
+					<div id="footer-links">
+						<a href="https://facebook.com/SternBAC/" class="footer-link" target="_blank">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+						<a href="mailto:analytic@stern.nyu.edu" class="footer-link">
+							<i class="far fa-envelope"></i>
+						</a>
+					</div>
+
+					<div id="copyright">
+						&copy; Business Analytics Club
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+        <script>
+            const semesters = document.querySelectorAll(".semester");
+            semesters.forEach((s) => {
+                s.addEventListener('click', () => {
+                    s.classList.toggle("pressed-semester");
+                    let months = document.querySelector(`#${s.id} > .months`);
+                    let icon = document.querySelector(`#${s.id} > .semester-icon`);
+
+                    if(!s.classList.contains("pressed-semester")){
+                        icon.innerHTML = "+";
+                        months.classList.remove("showing");
+                        months.style["overflow"] = "hidden";
+                        months.animate([
+                            { opacity: 1, height: "120px"},
+                            { opacity: 0, height: "0"}
+                        ], {
+                        fill: 'both',
+                        duration: 500
+                        });
+                        setTimeout(() => {
+                            months.style["max-height"] = "0";
+                        }, 500);
+                    } else {
+                        icon.innerHTML = "-";
+                        months.classList.add("showing");
+                        months.style["max-height"] = "120px";
+                        months.style["overflow"] = "auto";
+                        months.animate([
+                            { opacity: 0, height: "0"},
+                            { opacity: 1,  height: "120px"}
+                        ], {
+                        fill: 'both',
+                        duration: 500
+                        });
+				    }
+                });
+            });
+        </script>
+        <script src="./general-scripts.js"></script>
+  </body>
+</html>

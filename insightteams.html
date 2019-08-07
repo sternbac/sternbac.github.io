@@ -1,0 +1,399 @@
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>BAC - Insight Teams</title>
+		<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="bac-logo.css">
+		<link rel="stylesheet" type="text/css" href="general-styles.css">
+        <script src="https://kit.fontawesome.com/65e5c6d42f.js"></script>
+        
+        <style>
+            
+            #about {
+                background-color: #374C60;
+                margin: 40px 0;
+            }
+
+            #about-content {
+                padding: 15px 50px 30px 50px;
+                color: white;
+                font-size: 18px;
+            }
+
+            #insight-teams {
+                margin: 40px 0;
+            }
+
+            .team-header {
+                font-size: 22px;
+                color:#374C60;
+                text-align: center;
+                height: 50px;
+                line-height: 50px;
+                background-color: #eeeeee;
+                padding: 0 20px;
+                font-weight: bold;
+                width: 100%;
+            }
+
+            #past-projects {
+                background-color: #374C60;
+                box-sizing: border-box;
+                padding: 10px;
+                min-height: 150px;
+                margin: 40px 0;
+            }
+
+            .semester {
+                width:80%;
+                background-color: #eeeeee;
+                border-radius: 5px;
+                margin: 10px auto;
+            }
+
+            .semester-icon, .semester-text {
+                display: inline-block;
+                font-size: 20px;
+                line-height: 30px;
+                height:30px;
+                margin: 0 10px;
+
+            }
+
+            .pressed-semester {
+                background-color: #1AB999;
+            }
+
+            .projects{ /* Needed for animation effects via JS */
+                max-height: 0px;
+                overflow: hidden;
+                width:100%;
+                box-sizing: border-box;
+            }
+
+            .project {
+                height: 30px;
+                border-top: 2px solid #1AB999;
+                padding-left: 30px;
+                background-color: #eeeeee;
+                box-sizing: border-box;
+                line-height: 28px;
+            }
+            .project:nth-child(5n){
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+
+        
+        </style>
+  </head>
+  <body>
+    <div id="navbar">
+
+		<!-- CENTER LOGO -->
+		<a id="center-logo" class="container fs-4" href="./index.html">
+			<div class="B">
+				<div class="b-top">
+					<div class="b-rect"></div>
+					<div class="b-circle"></div>
+				</div>
+				<div class="line"></div>
+				<div class="b-lower">
+					<div class="b-rect"></div>
+					<div class="b-circle"></div>
+				</div>
+			</div>
+
+			<div class="A">
+				<div class="a-left-line"></div>
+				<div class="line"></div>
+				<div class="a-right-line"></div>
+			</div>
+
+			<div class="C">
+				<div class="C-inner"></div>
+				<div class="C-whitespace"></div>
+				<div class="line"></div>
+			</div>
+		</a>
+
+			<div id="logo-text">
+				<span class="charcoal"> BUSINESS </span>
+				<span class="green"> ANALYTICS </span>
+				<span class="charcoal"> CLUB </span>
+			</div>
+
+			<div id="hamburger-menu">
+				<div class="h-line"></div>
+				<div class="h-line"></div>
+				<div class="h-line"></div>
+			</div>
+
+			<div id="nav-items">
+					<a class="navbar-item" href="./calendar.html" id="calendar-tab">Calendar</a>
+					<a class="navbar-item" href="./insightteams.html" id="insight-team-tab">Insight Teams</a>
+					<a class="navbar-item" href="./membership.html" id="membership-tab">Membership</a>
+					<a class="navbar-item" href="./bacsquared.html" id="bac-squared-tab">BAC<sup>2</sup> Conference</a>
+				</div>
+		</div>
+		<div id="body">
+
+			<div class="content-block">
+				<div class="content-block-header">
+					Insight Teams: Spring 2019
+				</div>
+				<div class="content-block-body">
+					<img src="./book.svg" class="content-icon">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu justo sit amet lacus molestie tincidunt eget vel ex.
+				</div>
+            </div>
+            
+            <div id="about">
+                <div class="main-header"> About The Insight Team </div>
+                <div class="main-underline-container">
+                    <div class="main-header-underline"></div>
+                </div>
+                <div id="about-content">
+                        The Insight Team Team is a new initiative launched by the undergraduate Business Analytics Club. The primary goal is to build upon the technical skills of students through workshops and participation in a semester-long data science project. We hope for the program to foster a sense of community for Stern students interested in the fields of "tech" and "analytics" as well as provide industry insight so that they can learn about career opportunities with firms that do not traditionally recruit at Stern.
+                </div>
+            </div>
+
+            <div id="insight-teams">
+                <div class="sub-header"> Fall 2017: A Project On Cryptocurrencies </div>
+                <div class="sub-underline-container">
+                    <div class="sub-header-underline"></div>
+                </div>
+
+                <div class="team-header"> Team 1 </div>
+                <div class="members">
+
+                    <div class="member">
+                        <img class="member-img" src="./stock_photo.jpg">
+                        <div class="member-content">
+                            <div class="member-info charcoal">
+                                <div class="member-name">
+                                    [Member Name]
+                                </div>
+                                <br>
+                                <div class="member-bio">
+                                    [Member Title]
+                                    <br>
+                                    [Member School Info]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member">
+                        <img class="member-img" src="./stock_photo.jpg">
+                        <div class="member-content">
+                            <div class="member-info charcoal">
+                                <div class="member-name">
+                                    [Member Name]
+                                </div>
+                                <br>
+                                <div class="member-bio">
+                                    [Member Title]
+                                    <br>
+                                    [Member School Info]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member">
+                        <img class="member-img" src="./stock_photo.jpg">
+                        <div class="member-content">
+                            <div class="member-info charcoal">
+                                <div class="member-name ">
+                                    [Member Name]
+                                </div>
+                                <br>
+                                <div class="member-bio ">
+                                    [Member Title]
+                                    <br>
+                                    [Member School Info]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member">
+                        <img class="member-img" src="./stock_photo.jpg">
+                        <div class="member-content">
+                            <div class="member-info charcoal">
+                                <div class="member-name">
+                                    [Member Name]
+                                </div>
+                                <br>
+                                <div class="member-bio">
+                                    [Member Title]
+                                    <br>
+                                    [Member School Info]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+
+                    <div class="team-header"> Team 2 </div>
+                    <div class="members">
+
+                        <div class="member">
+                            <img class="member-img" src="./stock_photo.jpg">
+                            <div class="member-content">
+                                <div class="member-info charcoal">
+                                    <div class="member-name">
+                                        [Member Name]
+                                    </div>
+                                    <br>
+                                    <div class="member-bio">
+                                        [Member Title]
+                                        <br>
+                                        [Member School Info]
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="member">
+                            <img class="member-img" src="./stock_photo.jpg">
+                            <div class="member-content">
+                                <div class="member-info charcoal">
+                                    <div class="member-name">
+                                        [Member Name]
+                                    </div>
+                                    <br>
+                                    <div class="member-bio">
+                                        [Member Title]
+                                        <br>
+                                        [Member School Info]
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="member">
+                            <img class="member-img" src="./stock_photo.jpg">
+                            <div class="member-content">
+                                <div class="member-info charcoal">
+                                    <div class="member-name ">
+                                        [Member Name]
+                                    </div>
+                                    <br>
+                                    <div class="member-bio ">
+                                        [Member Title]
+                                        <br>
+                                        [Member School Info]
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="member">
+                            <img class="member-img" src="./stock_photo.jpg">
+                            <div class="member-content">
+                                <div class="member-info charcoal">
+                                    <div class="member-name">
+                                        [Member Name]
+                                    </div>
+                                    <br>
+                                    <div class="member-bio">
+                                        [Member Title]
+                                        <br>
+                                        [Member School Info]
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+
+            <div id="past-projects">
+                    <div class="main-header"> Past Projects By Semester </div>
+                    <div class="main-underline-container">
+                        <div class="main-header-underline"></div>
+                    </div>
+    
+                    <div id="past-projects-content">
+    
+                        <div class="semester" id="spring2017">
+                            <div class="semester-icon"> + </div>
+                            <div class="semester-text"> Spring 2017 </div>
+                            <div class="projects">
+                                <div class="project">Project 1</div>
+                                <div class="project">Project 2</div>
+                                <div class="project">Project 3</div>
+                                <div class="project">Project 4</div>
+                                <div class="project">Project 5</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+			<div id="footer">
+				<div id="footer-content">
+					<div id="footer-links">
+						<a href="https://facebook.com/SternBAC/" class="footer-link" target="_blank">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+						<a href="mailto:analytic@stern.nyu.edu" class="footer-link">
+							<i class="far fa-envelope"></i>
+						</a>
+					</div>
+
+					<div id="copyright">
+						&copy; Business Analytics Club
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+        <script>
+            const semesters = document.querySelectorAll(".semester");
+            semesters.forEach((s) => {
+                s.addEventListener('click', () => {
+                    s.classList.toggle("pressed-semester");
+                    let projects = document.querySelector(`#${s.id} > .projects`);
+                    let icon = document.querySelector(`#${s.id} > .semester-icon`);
+
+                    if(!s.classList.contains("pressed-semester")){
+                        icon.innerHTML = "+";
+                        projects.classList.remove("showing");
+                        projects.style["overflow"] = "hidden";
+                        projects.animate([
+                            { opacity: 1, height: "150px"},
+                            { opacity: 0, height: "0"}
+                        ], {
+                        fill: 'both',
+                        duration: 500
+                        });
+                        setTimeout(() => {
+                            projects.style["max-height"] = "0";
+                        }, 500);
+                    } else {
+                        icon.innerHTML = "-";
+                        projects.classList.add("showing");
+                        projects.style["max-height"] = "150px";
+                        projects.style["overflow"] = "auto";
+                        projects.animate([
+                            { opacity: 0, height: "0"},
+                            { opacity: 1,  height: "150px"}
+                        ], {
+                        fill: 'both',
+                        duration: 500
+                        });
+                    }
+                });
+            });
+        </script>
+        <script src="./general-scripts.js"></script>
+  </body>
+</html>
