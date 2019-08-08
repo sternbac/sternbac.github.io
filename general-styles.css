@@ -109,12 +109,13 @@ html, body {
 /* Body/Content styles*/
 
 #body {
-    padding: 120px 0 100px 0;
-    box-sizing: border-box;
+    padding: 120px 0 0 0;
     background-color: inherit;
     font-family: 'Oswald', sans-serif;
     position: relative;
     height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
 }
 
 .content-block {

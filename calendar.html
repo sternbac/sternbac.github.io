@@ -61,12 +61,8 @@
                 border-bottom-right-radius: 5px;
             }
 
-            @media only screen and (min-height: 600px){
-                #footer { /* Only Cuz content for Calendar is kinda short */
-                    position: absolute;
-                    width: 100%;
-                    bottom: 0;
-                }
+            #space {
+                height: calc(100% - 500px);
             }
             
         </style>
@@ -166,6 +162,8 @@
                 </div>
             </div>
 
+            <div id="space"></div>
+
 			<div id="footer">
 				<div id="footer-content">
 					<div id="footer-links">
@@ -222,6 +220,6 @@
                 });
             });
         </script>
-        <script src="./general-scripts.js"></script>
+        <script src="general-scripts.js"></script>
   </body>
 </html>
