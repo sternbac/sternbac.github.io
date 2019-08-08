@@ -36,6 +36,7 @@
                 padding: 0 20px;
                 font-weight: bold;
                 width: 100%;
+                box-sizing: border-box;
             }
 
             #past-projects {
@@ -89,6 +90,9 @@
 
         
         </style>
+
+        <!-- Include the polyfill -->
+        <script src="./web-animations-js-2.3.1/web-animations.min.js"></script>
   </head>
   <body>
     <div id="navbar">
@@ -238,124 +242,123 @@
                         </div>
                     </div>
     
+                </div>
+                <div class="team-header"> Team 2 </div>
+                <div class="members">
 
-                    <div class="team-header"> Team 2 </div>
-                    <div class="members">
-
-                        <div class="member">
-                            <img class="member-img" src="./stock_photo.jpg">
-                            <div class="member-content">
-                                <div class="member-info charcoal">
-                                    <div class="member-name">
-                                        [Member Name]
-                                    </div>
+                    <div class="member">
+                        <img class="member-img" src="./stock_photo.jpg">
+                        <div class="member-content">
+                            <div class="member-info charcoal">
+                                <div class="member-name">
+                                    [Member Name]
+                                </div>
+                                <br>
+                                <div class="member-bio">
+                                    [Member Title]
                                     <br>
-                                    <div class="member-bio">
-                                        [Member Title]
-                                        <br>
-                                        [Member School Info]
-                                    </div>
+                                    [Member School Info]
                                 </div>
                             </div>
                         </div>
-    
-                        <div class="member">
-                            <img class="member-img" src="./stock_photo.jpg">
-                            <div class="member-content">
-                                <div class="member-info charcoal">
-                                    <div class="member-name">
-                                        [Member Name]
-                                    </div>
-                                    <br>
-                                    <div class="member-bio">
-                                        [Member Title]
-                                        <br>
-                                        [Member School Info]
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="member">
-                            <img class="member-img" src="./stock_photo.jpg">
-                            <div class="member-content">
-                                <div class="member-info charcoal">
-                                    <div class="member-name ">
-                                        [Member Name]
-                                    </div>
-                                    <br>
-                                    <div class="member-bio ">
-                                        [Member Title]
-                                        <br>
-                                        [Member School Info]
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="member">
-                            <img class="member-img" src="./stock_photo.jpg">
-                            <div class="member-content">
-                                <div class="member-info charcoal">
-                                    <div class="member-name">
-                                        [Member Name]
-                                    </div>
-                                    <br>
-                                    <div class="member-bio">
-                                        [Member Title]
-                                        <br>
-                                        [Member School Info]
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
+
+                    <div class="member">
+                        <img class="member-img" src="./stock_photo.jpg">
+                        <div class="member-content">
+                            <div class="member-info charcoal">
+                                <div class="member-name">
+                                    [Member Name]
+                                </div>
+                                <br>
+                                <div class="member-bio">
+                                    [Member Title]
+                                    <br>
+                                    [Member School Info]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member">
+                        <img class="member-img" src="./stock_photo.jpg">
+                        <div class="member-content">
+                            <div class="member-info charcoal">
+                                <div class="member-name ">
+                                    [Member Name]
+                                </div>
+                                <br>
+                                <div class="member-bio ">
+                                    [Member Title]
+                                    <br>
+                                    [Member School Info]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="member">
+                        <img class="member-img" src="./stock_photo.jpg">
+                        <div class="member-content">
+                            <div class="member-info charcoal">
+                                <div class="member-name">
+                                    [Member Name]
+                                </div>
+                                <br>
+                                <div class="member-bio">
+                                    [Member Title]
+                                    <br>
+                                    [Member School Info]
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
             <div id="past-projects">
-                    <div class="main-header"> Past Projects By Semester </div>
-                    <div class="main-underline-container">
-                        <div class="main-header-underline"></div>
-                    </div>
-    
-                    <div id="past-projects-content">
-    
-                        <div class="semester" id="spring2017">
-                            <div class="semester-icon"> + </div>
-                            <div class="semester-text"> Spring 2017 </div>
-                            <div class="projects">
-                                <div class="project">Project 1</div>
-                                <div class="project">Project 2</div>
-                                <div class="project">Project 3</div>
-                                <div class="project">Project 4</div>
-                                <div class="project">Project 5</div>
-                            </div>
+                <div class="main-header"> Past Projects By Semester </div>
+                <div class="main-underline-container">
+                    <div class="main-header-underline"></div>
+                </div>
+
+                <div id="past-projects-content">
+
+                    <div class="semester" id="spring2017">
+                        <div class="semester-icon"> + </div>
+                        <div class="semester-text"> Spring 2017 </div>
+                        <div class="projects">
+                            <div class="project">Project 1</div>
+                            <div class="project">Project 2</div>
+                            <div class="project">Project 3</div>
+                            <div class="project">Project 4</div>
+                            <div class="project">Project 5</div>
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <div id="footer">
+                <div id="footer-content">
+                    <div id="footer-links">
+                        <a href="https://facebook.com/SternBAC/" class="footer-link" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="mailto:analytic@stern.nyu.edu" class="footer-link">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                    </div>
 
+                    <div id="copyright">
+                        &copy; Business Analytics Club
+                    </div>
+                </div>
+            </div>
 
-			<div id="footer">
-				<div id="footer-content">
-					<div id="footer-links">
-						<a href="https://facebook.com/SternBAC/" class="footer-link" target="_blank">
-							<i class="fab fa-facebook-f"></i>
-						</a>
-						<a href="mailto:analytic@stern.nyu.edu" class="footer-link">
-							<i class="far fa-envelope"></i>
-						</a>
-					</div>
-
-					<div id="copyright">
-						&copy; Business Analytics Club
-					</div>
-				</div>
-
-			</div>
-
-		</div>
+        </div>
+        
+            
         <script>
             const semesters = document.querySelectorAll(".semester");
             semesters.forEach((s) => {

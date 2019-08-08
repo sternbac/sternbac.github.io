@@ -8,7 +8,8 @@
 		<link rel="stylesheet" type="text/css" href="bac-logo.css">
 		<link rel="stylesheet" type="text/css" href="general-styles.css">
         <script src="https://kit.fontawesome.com/65e5c6d42f.js"></script>
-        
+        <!-- Include the polyfill -->
+<script src="./web-animations-js-2.3.1/web-animations.min.js"></script>
         <style>
             #about {
                 background-color: #374C60;
@@ -203,47 +204,28 @@
 										Conference Wrap-Up
 									</td>
 								</tr>
-							</tbody></table>
+                            </tbody>
+                        </table>
                 </div>
-
-            </form>
-
-
-			<div id="footer">
-				<div id="footer-content">
-					<div id="footer-links">
-						<a href="https://facebook.com/SternBAC/" class="footer-link" target="_blank">
-							<i class="fab fa-facebook-f"></i>
-						</a>
-						<a href="mailto:analytic@stern.nyu.edu" class="footer-link">
-							<i class="far fa-envelope"></i>
-						</a>
-					</div>
-
-					<div id="copyright">
-						&copy; Business Analytics Club
-					</div>
-				</div>
-
-			</div>
-
+            </div>
+            <div id="footer">
+                    <div id="footer-content">
+                        <div id="footer-links">
+                            <a href="https://facebook.com/SternBAC/" class="footer-link" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="mailto:analytic@stern.nyu.edu" class="footer-link">
+                                <i class="far fa-envelope"></i>
+                            </a>
+                        </div>
+    
+                        <div id="copyright">
+                            &copy; Business Analytics Club
+                        </div>
+                    </div>
+    
+                </div>
 		</div>
-        <script>
-            const submitBtn = document.getElementById('submit-btn');
-            const submitBtnSpan = document.querySelector('#submit-btn > span');
-            const submitNetID = document.getElementById('membership-input');
-            const reply = document.getElementById('reply-status');
-
-            submitBtn.addEventListener('click', (event) => {
-                handleMembershipSubmit(event);
-            });
-
-            function handleMembershipSubmit(event){
-                event.preventDefault();
-                reply.style.display = "block";
-            }
-
-        </script>
         <script src="./general-scripts.js"></script>
   </body>
 </html>

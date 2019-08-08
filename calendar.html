@@ -61,9 +61,18 @@
                 border-bottom-right-radius: 5px;
             }
 
-
-        
+            @media only screen and (min-height: 600px){
+                #footer { /* Only Cuz content for Calendar is kinda short */
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                }
+            }
+            
         </style>
+
+        <!-- Include the polyfill -->
+        <script src="./web-animations-js-2.3.1/web-animations.min.js"></script>
   </head>
   <body>
     <div id="navbar">
@@ -157,8 +166,6 @@
                 </div>
             </div>
 
-            <br>
-
 			<div id="footer">
 				<div id="footer-content">
 					<div id="footer-links">
@@ -174,7 +181,6 @@
 						&copy; Business Analytics Club
 					</div>
 				</div>
-
 			</div>
 
 		</div>

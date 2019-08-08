@@ -443,22 +443,22 @@
   .fs-4 .b-top > .b-rect {
     width:3em;
     height:3em;
-    border-left: 0.2em solid #374C60;
-    border-top: 0.2em solid #374C60;
+    border-left: 0.3em solid #374C60;
+    border-top: 0.3em solid #374C60;
   }
 
   .fs-4 .b-lower > .b-rect {
     height: 3.5em;
     width: 3.2em;
-    border-left: 0.2em solid #374C60;
-    border-bottom: 0.2em solid #374C60;
+    border-left: 0.3em solid #374C60;
+    border-bottom: 0.3em solid #374C60;
   }
 
   .fs-4 .b-top > .b-circle, .fs-4 .b-lower > .b-circle {
     position:absolute;
     border-radius: 100%;
     box-sizing: border-box;
-    border: 0.2em solid #4B4453;
+    border: 0.3em solid #4B4453;
     z-index:1;
   }
 
@@ -477,7 +477,7 @@
   .fs-4 .line {
     position: absolute;
     z-index: 3;
-    height: 0.2em;
+    height: 0.3em;
   }
 
   .fs-4 .B > .line {
@@ -522,7 +522,7 @@
     border-radius: 50%;
     height:6.5em;
     width:6em;
-    border: 0.2em solid #374C60;
+    border: 0.3em solid #374C60;
     box-sizing: border-box;
   }
 
