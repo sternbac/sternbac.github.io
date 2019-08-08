@@ -114,7 +114,8 @@ html, body {
     font-family: 'Oswald', sans-serif;
     position: relative;
     height: 100%;
-    overflow: auto;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     box-sizing: border-box;
 }
 
