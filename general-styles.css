@@ -3,6 +3,22 @@ margin: 0;
 padding: 0;
 }
 
+/* Fonts */
+
+@font-face {
+    src: url(./Oswald/Oswald-Regular.ttf);
+    font-family: Oswald;
+    font-weight:400;
+}
+
+@font-face {
+    src: url(./Oswald/Oswald-Bold.ttf);
+    font-family: Oswald;
+    font-weight:700;
+}
+
+/* Generics */
+
 html, body {
     height:100%;
     min-height: 100%;
