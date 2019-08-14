@@ -64,69 +64,81 @@
         </style>
   </head>
   <body>
-    <div id="navbar">
-
-		<!-- CENTER LOGO -->
-		<a id="center-logo" class="container fs-4" href="./index.html">
-			<div class="B">
-				<div class="b-top">
-					<div class="b-rect"></div>
-					<div class="b-circle"></div>
+		<div id="navbar">
+				<div id="navbar-header">
+					<!-- CENTER LOGO -->
+					<a id="center-logo" class="container fs-4" href="./index.html">
+						<div class="B">
+							<div class="b-top">
+								<div class="b-rect"></div>
+								<div class="b-circle"></div>
+							</div>
+							<div class="line"></div>
+							<div class="b-lower">
+								<div class="b-rect"></div>
+								<div class="b-circle"></div>
+							</div>
+						</div>
+	
+						<div class="A">
+							<div class="a-left-line"></div>
+							<div class="line"></div>
+							<div class="a-right-line"></div>
+						</div>
+	
+						<div class="C">
+							<div class="C-inner"></div>
+							<div class="C-whitespace"></div>
+							<div class="line"></div>
+						</div>
+					</a>
+	
+					<div id="logo-text">
+						<span class="charcoal"> BUSINESS </span>
+						<span class="green"> ANALYTICS </span>
+						<span class="charcoal"> CLUB </span>
+					</div>
+	
+					<div id="hamburger-menu">
+						<div class="h-line"></div>
+						<div class="h-line"></div>
+						<div class="h-line"></div>
+					</div>
+	
 				</div>
-				<div class="line"></div>
-				<div class="b-lower">
-					<div class="b-rect"></div>
-					<div class="b-circle"></div>
-				</div>
-			</div>
-
-			<div class="A">
-				<div class="a-left-line"></div>
-				<div class="line"></div>
-				<div class="a-right-line"></div>
-			</div>
-
-			<div class="C">
-				<div class="C-inner"></div>
-				<div class="C-whitespace"></div>
-				<div class="line"></div>
-			</div>
-		</a>
-
-			<div id="logo-text">
-				<span class="charcoal"> BUSINESS </span>
-				<span class="green"> ANALYTICS </span>
-				<span class="charcoal"> CLUB </span>
-			</div>
-
-			<div id="hamburger-menu">
-				<div class="h-line"></div>
-				<div class="h-line"></div>
-				<div class="h-line"></div>
-			</div>
-
-			<div id="nav-items">
+	
+				<div id="nav-items">
 					<a class="navbar-item" href="./calendar.html" id="calendar-tab">Calendar</a>
 					<a class="navbar-item" href="./insightteams.html" id="insight-team-tab">Insight Teams</a>
 					<a class="navbar-item" href="./membership.html" id="membership-tab">Membership</a>
 					<a class="navbar-item" href="./bacsquared.html" id="bac-squared-tab">BAC<sup>2</sup> Conference</a>
 				</div>
 		</div>
+		
 		<div id="body">
 
-			<div class="content-block">
-				<div class="content-block-header">
-                    BAC<sup>2</sup> Conference
+			<div class="content-block-container">
+				<div class="overlay"></div>
+				<div class="content-block">
+					<div class="content-block-header">
+						BAC<sup>2</sup> Conference
+					</div>
+					<div class="content-block-body">
+						<img src="./discussion.svg" class="content-icon">
+						<span class="text">
+							<u>Beyond The Code</u>
+						</span>
+						<br>
+						<span class="text">
+							<b>When:</b> Lorem ipsum dolor sit amet
+						</span>
+						<br>
+						<span class="text">
+							<b>Where:</b> Nam pulvinar tellus sit amet lectus faucibus feugiat
+						</span>
+					</div>
 				</div>
-				<div class="content-block-body">
-                    <img src="./discussion.svg" class="content-icon">
-                    <u>Beyond The Code</u>
-                    <br>
-                    <b>When:</b> Lorem ipsum dolor sit amet
-                    <br>
-                    <b>Where:</b> Nam pulvinar tellus sit amet lectus faucibus feugiat
-				</div>
-            </div>
+			</div>
             
             <div id="about">
                 <div class="main-header"> About The Conference </div>
@@ -134,14 +146,16 @@
                     <div class="main-header-underline"></div>
                 </div>
                 <div id="about-content">
-                        The Business Analytics Club Business Analytics Conference is BACs premire event to further develop students’ understanding of analytics work and the underlying industry attached to it. This year we will be hostinga number of companies who are leaders in the analytics world, including PwC, Spotify, and AppNexus. The event consists of a Keynote presentation about what it means to work in analytics and what competencies, outside of pure coding, are required for students to be successful in the industry. The event will also include a meet & greet with the companies, a corporate panel where representitives from the companies will be able to share their insight and experience, followed by a networking reception with refreshments. We are very excited for this event and look forward to seeing all you business analytics gurus there! 
-                </div>
+					<span class="text">
+                    	The Business Analytics Club Business Analytics Conference is BACs premire event to further develop students’ understanding of analytics work and the underlying industry attached to it. This year we will be hostinga number of companies who are leaders in the analytics world, including PwC, Spotify, and AppNexus. The event consists of a Keynote presentation about what it means to work in analytics and what competencies, outside of pure coding, are required for students to be successful in the industry. The event will also include a meet & greet with the companies, a corporate panel where representitives from the companies will be able to share their insight and experience, followed by a networking reception with refreshments. We are very excited for this event and look forward to seeing all you business analytics gurus there! 
+					</span>
+				</div>
             </div>
 
-
-
             <div id="schedule">
-                <div class="sub-header"> BAC<sup>2</sup> Conference Schedule </div>
+                <div class="sub-header">
+					<span class="text">BAC<sup>2</sup> Conference Schedule</span>
+				</div>
                 <div class="sub-underline-container">
                     <div class="sub-header-underline"></div>
                 </div>
@@ -150,58 +164,86 @@
                         <table>
 								<tbody><tr>
 									<td>
-										<strong>Time</strong>
+										<span class="text">
+											<strong>Time</strong>
+										</span>
 									</td>
 									<td>
-										<strong>Event</strong>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										6:00pm – 6:10pm
-									</td>
-									<td>
-										Check-in and introductory speech from BAC President, Caitlyn Lubas
+										<span class="text">
+											<strong>Event</strong>
+										</span>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										6:10pm – 6:30pm
+										<span class="text">
+											6:00pm – 6:10pm
+										</span>
 									</td>
 									<td>
-										Keynote Speech from Foster Provost, Professor of Information Systems from the Stern IOMS Department and Fubon Center Director of Data Analytics
-									</td>
-								</tr>
-								<tr>
-									<td>
-										6:30pm – 7:00pm
-									</td>
-									<td>
-										Meet and Greet Session – students will rotate to different tables to speak with 3 out of 6 corporate partners (EY, PwC, IBM, Spotify, AppNexus, and Twitter) of their choosing in 3 consecutive 10-minute rounds
+										<span class="text">
+												Check-in and introductory speech from BAC President, Caitlyn Lubas
+										</span>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										7:00pm – 8:00pm
+										<span class="text">
+											6:10pm – 6:30pm										
+										</span>
 									</td>
 									<td>
-										Corporate Panel – representatives from Spotify, IBM, AppNexus, and Twitter will participate in a panel with 30-40 minutes of guided questions led by President of BAC, followed by audience Q&amp;A
-									</td>
-								</tr>
-								<tr>
-									<td>
-										8:00pm – 8:25pm
-									</td>
-									<td>
-										Networking Session &amp; Refreshments – students and professionals will have time for unstructured networking while enjoying some light refreshments
+										<span class="text">
+											Keynote Speech from Foster Provost, Professor of Information Systems from the Stern IOMS Department and Fubon Center Director of Data Analytics									
+										</span>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										8:25pm – 8:30pm
+										<span class="text">
+											6:30pm – 7:00pm
+										</span>
 									</td>
 									<td>
-										Conference Wrap-Up
+										<span class="text">
+											Meet and Greet Session – students will rotate to different tables to speak with 3 out of 6 corporate partners (EY, PwC, IBM, Spotify, AppNexus, and Twitter) of their choosing in 3 consecutive 10-minute rounds
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="text">
+											7:00pm – 8:00pm
+										</span>
+									</td>
+									<td>
+										<span class="text">
+											Corporate Panel – representatives from Spotify, IBM, AppNexus, and Twitter will participate in a panel with 30-40 minutes of guided questions led by President of BAC, followed by audience Q&amp;A
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="text">
+											8:00pm – 8:25pm
+										</span>
+									</td>
+									<td>
+										<span class="text">
+											Networking Session &amp; Refreshments – students and professionals will have time for unstructured networking while enjoying some light refreshments
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="text">
+											8:25pm – 8:30pm
+										</span>
+									</td>
+									<td>
+										<span class="text">
+											Conference Wrap-Up
+										</span>
 									</td>
 								</tr>
                             </tbody>
@@ -220,7 +262,7 @@
                         </div>
     
                         <div id="copyright">
-                            &copy; Business Analytics Club
+							<span class="text">&copy; Business Analytics Club </span>
                         </div>
                     </div>
     
