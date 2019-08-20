@@ -331,76 +331,27 @@ html, body {
     font-weight: normal;
 }
 
-/* Subscribe Btn */
+/* Semesters */
 
-#subscribe-container {
-    margin: 40px auto;
-    width: 80%;
-    max-width: 400px;
-}
-
-#subscribe-input {
-    width: 100%;
-    background-color: #f0f0f0;
-    color: #374C60;
-    outline: none;
-    border: 2px dotted #374C60;
-    padding: 5px;
-    height: 45px;
-    line-height: 35px;
-    font-size: 20px;
+.semester {
+    width:80%;
+    background-color: #eeeeee;
     border-radius: 5px;
+    margin: 10px auto;
+    max-width: 500px;
 }
 
-#subscribe-input::placeholder {
-    color: #374C60;
-}
-
-#subscribe-input:focus {
-    border-color: #1AB999;
-}
-
-#subscribe-btn {
-    color: #374C60;
-    text-align: center;
-    border: 2px solid #374C60;
-    margin: 5px 0;
-    height: 45px;
-    line-height: 45px;
+.semester-icon, .semester-text {
+    display: inline-block;
     font-size: 20px;
-    font-weight: bold;
-    box-sizing: border-box;
-    background-image: 
-        repeating-linear-gradient(
-        -45deg, 
-        transparent, 
-        transparent 1rem,
-        #1AB999 1rem,
-        #1AB999 2rem
-        );
-    background-size: 200% 200%;
-    /* animation: barberpole 30s linear infinite; */
+    line-height: 30px;
+    height:30px;
+    margin: 0 10px;
+
 }
 
-/* @keyframes barberpole {
-    100% {
-        background-position: 100% 100%;
-    }
-} */
-
-#subscribe-btn > span {
-    background-color: #374C60;
-    width: 100%;
-    height:100%;
-    display: block;
-    color: white;
-}
-
-#thanks-sub {
-    display: none;
-    color:#374C60;
-    font-size: 14px;
-    text-align: center;
+.pressed-semester {
+    background-color: #1AB999;
 }
 
 /* Footer */
