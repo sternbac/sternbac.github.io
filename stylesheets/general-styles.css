@@ -6,13 +6,13 @@ padding: 0;
 /* Fonts */
 
 @font-face {
-    src: url(./Oswald/Oswald-Regular.ttf);
+    src: url(../miscellaneous-assets/Oswald/Oswald-Regular.ttf);
     font-family: Oswald;
     font-weight:400;
 }
 
 @font-face {
-    src: url(./Oswald/Oswald-Bold.ttf);
+    src: url(../miscellaneous-assets/Oswald/Oswald-Bold.ttf);
     font-family: Oswald;
     font-weight:700;
 }
@@ -66,7 +66,7 @@ html, body {
     padding-top: 15px;
 }
 
-#nav-items{ /* Needed for animation effects via JS */
+#nav-items { /* Needed for animation effects via JS */
     max-height: 0px;
     overflow: hidden;
     width:100%;
@@ -91,7 +91,7 @@ html, body {
     border-top: 2px solid #1AB999;
 }
 
-.navbar-item:nth-child(4) {
+.navbar-item:nth-child(5) {
     border-bottom: 2px solid #1AB999;
 }
 
@@ -169,6 +169,22 @@ html, body {
     border-radius: 5px;
     max-width: 600px;
     position: relative;
+    z-index: 10;
+    background-color: inherit;
+}
+
+.content-block::after {
+    content: " ";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid #374C60;
+    box-sizing: border-box;
+    border-radius: 5px;
+    z-index: -1;
 }
 
 .content-block-header {
@@ -178,12 +194,15 @@ html, body {
     color: white;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    
 }
 
 .content-block-body {
     padding: 10px;
     position: relative;
     text-align: center;
+    background-color: inherit;
+    border-radius: 5px;
 }
 
 .content-icon {
@@ -287,6 +306,7 @@ html, body {
 .member-content {
     height: 100%;
     margin-left: 5%;
+    width: 45%;
 }
 
 .member-info {
@@ -298,6 +318,7 @@ html, body {
     color:white;
     font-weight: bold;
     vertical-align: top;
+    width: 100%;
 }
 
 .member-name {
@@ -305,8 +326,9 @@ html, body {
 }
 
 .member-bio {
-    font-size: 16px;
+    font-size: 18px;
     opacity: 0.5;
+    font-weight: normal;
 }
 
 /* Subscribe Btn */

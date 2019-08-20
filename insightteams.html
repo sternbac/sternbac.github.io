@@ -4,11 +4,11 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	    <title>BAC - Insight Teams</title>
-		<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="bac-logo.css?v=1">
-		<link rel="stylesheet" type="text/css" href="general-styles.css?v=1">
+        <link rel="stylesheet" type="text/css" href="stylesheets/bac-logo.css?v=1">
+		<link rel="stylesheet" type="text/css" href="stylesheets/general-styles.css?v=1">
         <script src="https://kit.fontawesome.com/65e5c6d42f.js"></script>
-        
+        <!-- Include the polyfill -->
+        <script src="scripts/web-animations-js-2.3.1/web-animations.min.js"></script>
         <style>
             
             #about {
@@ -86,13 +86,7 @@
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
             }
-
-
-        
         </style>
-
-        <!-- Include the polyfill -->
-        <script src="./web-animations-js-2.3.1/web-animations.min.js"></script>
   </head>
   <body>
         <div id="navbar">
@@ -139,6 +133,7 @@
                 </div>
     
                 <div id="nav-items">
+                    <a class="navbar-item" href="./index.html" id="home-tab">Home</a>
                     <a class="navbar-item" href="./calendar.html" id="calendar-tab">Calendar</a>
                     <a class="navbar-item" href="./insightteams.html" id="insight-team-tab">Insight Teams</a>
                     <a class="navbar-item" href="./membership.html" id="membership-tab">Membership</a>
@@ -155,7 +150,7 @@
                         Insight Teams: Spring 2019
                     </div>
                     <div class="content-block-body">
-                        <img src="./book.svg" class="content-icon">
+                        <img src="icons/book.svg" class="content-icon">
                         <span class="text">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu justo sit amet lacus molestie tincidunt eget vel ex.
                         </span>
@@ -191,7 +186,7 @@
                 <div class="members">
 
                     <div class="member">
-                        <img class="member-img" src="./stock_photo.jpg">
+                        <img class="member-img" src="images/stock_photo.jpg">
                         <div class="member-content">
                             <div class="member-info charcoal">
                                 <div class="member-name">
@@ -208,7 +203,7 @@
                     </div>
 
                     <div class="member">
-                        <img class="member-img" src="./stock_photo.jpg">
+                        <img class="member-img" src="images/stock_photo.jpg">
                         <div class="member-content">
                             <div class="member-info charcoal">
                                 <div class="member-name">
@@ -225,7 +220,7 @@
                     </div>
 
                     <div class="member">
-                        <img class="member-img" src="./stock_photo.jpg">
+                        <img class="member-img" src="images/stock_photo.jpg">
                         <div class="member-content">
                             <div class="member-info charcoal">
                                 <div class="member-name">
@@ -242,7 +237,7 @@
                     </div>
 
                     <div class="member">
-                        <img class="member-img" src="./stock_photo.jpg">
+                        <img class="member-img" src="images/stock_photo.jpg">
                         <div class="member-content">
                             <div class="member-info charcoal">
                                 <div class="member-name">
@@ -265,7 +260,7 @@
                 <div class="members">
 
                     <div class="member">
-                        <img class="member-img" src="./stock_photo.jpg">
+                        <img class="member-img" src="images/stock_photo.jpg">
                         <div class="member-content">
                             <div class="member-info charcoal">
                                 <div class="member-name">
@@ -282,7 +277,7 @@
                     </div>
 
                     <div class="member">
-                        <img class="member-img" src="./stock_photo.jpg">
+                        <img class="member-img" src="images/stock_photo.jpg">
                         <div class="member-content">
                             <div class="member-info charcoal">
                                 <div class="member-name">
@@ -299,7 +294,7 @@
                     </div>
 
                     <div class="member">
-                        <img class="member-img" src="./stock_photo.jpg">
+                        <img class="member-img" src="images/stock_photo.jpg">
                         <div class="member-content">
                             <div class="member-info charcoal">
                                 <div class="member-name">
@@ -316,7 +311,7 @@
                     </div>
 
                     <div class="member">
-                        <img class="member-img" src="./stock_photo.jpg">
+                        <img class="member-img" src="images/stock_photo.jpg">
                         <div class="member-content">
                             <div class="member-info charcoal">
                                 <div class="member-name">
@@ -415,6 +410,6 @@
                 });
             });
         </script>
-        <script src="./general-scripts.js"></script>
+        <script src="scripts/general-scripts.js"></script>
   </body>
 </html>

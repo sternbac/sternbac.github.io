@@ -41,7 +41,7 @@ menu.addEventListener('click', () => {
         navItems.classList.remove("showing");
         navItems.style["overflow"] = "hidden";
         navItems.animate([
-            { opacity: 1, height: "120px"},
+            { opacity: 1, height: "150px"},
             { opacity: 0, height: "0"}
         ], {
             fill: 'both',
@@ -53,11 +53,11 @@ menu.addEventListener('click', () => {
         
     } else {
         navItems.classList.add("showing");
-        navItems.style["max-height"] = "120px";
+        navItems.style["max-height"] = "150px";
         navItems.style["overflow"] = "auto";
         navItems.animate([
             { opacity: 0, height: "0"},
-            { opacity: 1,  height: "120px"}
+            { opacity: 1,  height: "150px"}
         ], {
             fill: 'both',
             duration: 500
@@ -94,8 +94,9 @@ body.addEventListener('scroll', () => {
     fadeOnScroll();
 });
 
+const children = document.querySelectorAll(".text");
 function fadeOnScroll(){
-    const children = document.querySelectorAll(".text");
+    
     const bodyViewport = body.clientHeight - 20; // -20 cuz padding
     for(let i = 0; i < children.length; i++){
         let currChild = children[i];

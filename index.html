@@ -4,10 +4,11 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	    <title>BAC</title>
-		<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="bac-logo.css?v=1">
-		<link rel="stylesheet" type="text/css" href="general-styles.css?v=1">
+		<link rel="stylesheet" type="text/css" href="stylesheets/bac-logo.css?v=1">
+		<link rel="stylesheet" type="text/css" href="stylesheets/general-styles.css?v=1">
 		<script src="https://kit.fontawesome.com/65e5c6d42f.js"></script>
+		<!-- Include the polyfill -->
+        <script src="scripts/web-animations-js-2.3.1/web-animations.min.js"></script>
 		<style>
 
 			#board-container, #subscribe-container {
@@ -23,8 +24,9 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				flex-direction: column;
 				height: 300px;
-				background: url(./forest.jpg);
+				background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("images/forest.jpg");
 				background-size: cover;
 				border-radius: 3px;
 				animation-name: fadeIn;
@@ -50,15 +52,26 @@
 				line-height: 45px;
 				font-size: 20px;
 				border: 2px solid #374C60;
+				display: block;
 			}
 
 			#signup-link:hover {
 				box-shadow: 0 0 10px #1AB999, 0 0 40px #1AB999, 0 0 80px #1AB999;
 			}
 
+			#signup-header {
+				color: white;
+				font-size: 20px;
+				padding: 20px;
+			}
+
+			#subscribe-header {
+				text-align: center;
+				font-size: 20px;
+				padding-bottom: 10px;
+			}
+
 		</style>
-        <!-- Include the polyfill -->
-		<script src="./web-animations-js-2.3.1/web-animations.min.js"></script>
   </head>
   <body>
 		<div id="navbar">
@@ -105,6 +118,7 @@
 			</div>
 
 			<div id="nav-items">
+				<a class="navbar-item" href="./index.html" id="home-tab">Home</a>
 				<a class="navbar-item" href="./calendar.html" id="calendar-tab">Calendar</a>
 				<a class="navbar-item" href="./insightteams.html" id="insight-team-tab">Insight Teams</a>
 				<a class="navbar-item" href="./membership.html" id="membership-tab">Membership</a>
@@ -119,9 +133,17 @@
 				<div id="signup-link-block" class="content-block">
 					<div class="content-block-body">
 						<div id="signup-link-container">
-							<a id="signup-link">
-								Sign Up
-							</a>
+							<div id="signup-header">
+								<span class="text">
+									BRINGING BUSINESS ANALYTICS
+									TO STERN SINCE 2015
+								</span>
+							</div>
+							<div>
+								<a id="signup-link">
+									Sign Up
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -134,7 +156,7 @@
 						<span class="text">Announcements</span>
 					</div>
 					<div class="content-block-body">
-						<img src="./businessman.svg" class="content-icon">
+						<img src="icons/businessman.svg" class="content-icon">
 						<span class="text"></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu justo sit amet lacus molestie tincidunt eget vel ex.</span>
 						<div class="dotted-underline"></div>
 						<span class="text"></span>Cras scelerisque, est ac finibus porta, neque nulla laoreet purus, ac elementum nisi diam sit amet metus. Suspendisse suscipit purus vel tempor malesuada.</span>
@@ -154,78 +176,17 @@
 				
 				<div class="members">
 
-					<div class="member">
-						<img class="member-img" src="./stock_photo.jpg">
-						<div class="member-content">
-							<div class="member-info">
-								<div class="member-name">
-									<span class="text"> [Member Name] </span>
-								</div>
-								<br>
-								<div class="member-bio">
-									<span class="text">[Member Title]</span>
-									<br>
-									<span class="text">[Member School Info]</span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="member">
-						<img class="member-img" src="./stock_photo.jpg">
-						<div class="member-content">
-							<div class="member-info">
-								<div class="member-name">
-									<span class="text"> [Member Name] </span>
-								</div>
-								<br>
-								<div class="member-bio">
-									<span class="text">[Member Title]</span>
-									<br>
-									<span class="text">[Member School Info]</span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="member">
-						<img class="member-img" src="./stock_photo.jpg">
-						<div class="member-content">
-							<div class="member-info">
-								<div class="member-name">
-									<span class="text"> [Member Name] </span>
-								</div>
-								<br>
-								<div class="member-bio">
-									<span class="text">[Member Title]</span>
-									<br>
-									<span class="text">[Member School Info]</span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="member">
-						<img class="member-img" src="./stock_photo.jpg">
-						<div class="member-content">
-							<div class="member-info">
-								<div class="member-name">
-									<span class="text"> [Member Name] </span>
-								</div>
-								<br>
-								<div class="member-bio">
-									<span class="text">[Member Title]</span>
-									<br>
-									<span class="text">[Member School Info]</span>
-								</div>
-							</div>
-						</div>
-					</div>
+					 <!-- Members Injected Here -->
 
 				</div>
 			</div>
 
 			<form id="subscribe-container" onsubmit="handleEmailSubmit(event)">
+				<div id="subscribe-header">
+					<span class="text">
+							Join our mailing list to receive updates about our events, guest speakers, and exclusive opportunities in our weekly BAC newsletter!
+					</span>
+				</div>
 				<input placeholder="Enter Email..." id="subscribe-input">
 				<div id="subscribe-btn">
 					<span>SUBSCRIBE</span>
@@ -240,7 +201,7 @@
 						<span class="text">Mission Statement</span>
 				</div>
 				<div class="content-block-body">
-					<img src="./target.svg" class="content-icon">
+					<img src="icons/target.svg" class="content-icon">
 					<span class="text">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu justo sit amet lacus molestie tincidunt eget vel ex.
 					</span>
@@ -266,7 +227,8 @@
 			</div>
 
 		</div>
-		<script src="general-scripts.js"></script>
-		<script src="homepage-scripts.js"></script>
+		<script src="JSONs/executive-board.js"></script>
+		<script src="scripts/homepage-scripts.js"></script>
+		<script src="scripts/general-scripts.js"></script>
   </body>
 </html>
