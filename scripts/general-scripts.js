@@ -1,6 +1,7 @@
 
 const menu = document.getElementById('hamburger-menu');
 const lines = document.querySelectorAll('.h-line');
+const navItems = document.querySelector("#nav-items");
 
 menu.addEventListener('click', () => {
     menu.classList.toggle("menu-showing");
@@ -36,7 +37,6 @@ menu.addEventListener('click', () => {
         });
     }
 
-    const navItems = document.querySelector("#nav-items");
     if(navItems.classList.contains("showing")){
         navItems.classList.remove("showing");
         navItems.style["overflow"] = "hidden";
@@ -67,27 +67,34 @@ menu.addEventListener('click', () => {
 
 
 const body = document.getElementById('body');
-const logoText = document.getElementById('logo-text');
-const centerLogo = document.getElementById('center-logo');
+const mobileLogoText = document.querySelector('#mobile-navbar #logo-text');
+const wideLogoText = document.querySelector('#wide-navbar #logo-text');
+const mobileCenterLogo = document.querySelector('#mobile-navbar #center-logo');
+const wideCenterLogo = document.querySelector('#wide-navbar #center-logo');
 const navbar = document.getElementById('navbar');
 const navbarHeader = document.getElementById('navbar-header');
-const navItems = document.getElementById("nav-items");
+const mobileNavItems = document.querySelector("#mobile-navbar #nav-items");
+const wideNavItems = document.querySelector("#wide-navbar #nav-items-wide");
 
-const movement = ( ( window.innerWidth - centerLogo.offsetWidth ) / 2 ) - 15;
+const movement = ( ( window.innerWidth - mobileCenterLogo.offsetWidth ) / 2 ) - 15;
 let currScroll = 0;
 
 body.addEventListener('scroll', () => {
     currScroll = body.scrollTop;
     const threshold = 60;
     if(currScroll > threshold){
-        logoText.style.display = "none";
-        centerLogo.style.transform = `scale(1) translateX(-${movement}px)`;
+        mobileLogoText.style.display = "none";
+        wideLogoText.style.display = "none";
+        mobileCenterLogo.style.transform = `scale(1) translateX(-${movement}px)`;
+        wideCenterLogo.style.transform = "scale(1) translateY(20px)";
         navbarHeader.style.height = "75px";
         navbarHeader.style["border-bottom"] = "2px solid #374C60";
 
     } else if(currScroll < threshold){
-        logoText.style.display = "block";
-        centerLogo.style.transform = "scale(1.5) translateX(0px)";
+        mobileLogoText.style.display = "block";
+        wideLogoText.style.display = "block";
+        mobileCenterLogo.style.transform = "scale(1.5) translateX(0px)";
+        wideCenterLogo.style.transform = "scale(1.5) translateY(0px)";
         navbarHeader.style.height = "120px";
         navbarHeader.style["border-bottom"] = "2px solid transparent";
     }

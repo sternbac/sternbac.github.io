@@ -21,6 +21,11 @@
                 font-size: 18px;
             }
 
+            #about-content, #schedule-content {
+                max-width: 600px;
+                margin: auto;
+            }
+
             #event-content {
                 color: #374C60;
                 text-align: center;
@@ -114,8 +119,59 @@
         </style>
   </head>
   <body>
-        <div id="navbar">
-                <div id="navbar-header">
+    <div id="navbar">
+        <div id="navbar-header">
+            <div id="mobile-navbar">
+                <div id="logo-container">
+                    <a id="center-logo" class="container fs-4" href="./index.html">
+                        <div class="B">
+                            <div class="b-top">
+                                <div class="b-rect"></div>
+                                <div class="b-circle"></div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="b-lower">
+                                <div class="b-rect"></div>
+                                <div class="b-circle"></div>
+                            </div>
+                        </div>
+
+                        <div class="A">
+                            <div class="a-left-line"></div>
+                            <div class="line"></div>
+                            <div class="a-right-line"></div>
+                        </div>
+
+                        <div class="C">
+                            <div class="C-inner"></div>
+                            <div class="C-whitespace"></div>
+                            <div class="line"></div>
+                        </div>
+                    </a>
+
+                    <div id="logo-text">
+                        <span class="charcoal"> BUSINESS </span>
+                        <span class="green"> ANALYTICS </span>
+                        <span class="charcoal"> CLUB </span>
+                    </div>
+                </div>
+
+
+                <div id="hamburger-menu">
+                    <div class="h-line"></div>
+                    <div class="h-line"></div>
+                    <div class="h-line"></div>
+                </div>
+            </div>
+
+            <div id="wide-navbar">
+                <a class="navbar-item-wide" href="./calendar.html" id="calendar-tab">
+                    Calendar
+                </a>
+                <a class="navbar-item-wide" href="./insightteams.html" id="insight-team-tab">
+                    Insight Teams
+                </a>
+                <div id="logo-container">
                     <!-- CENTER LOGO -->
                     <a id="center-logo" class="container fs-4" href="./index.html">
                         <div class="B">
@@ -129,42 +185,44 @@
                                 <div class="b-circle"></div>
                             </div>
                         </div>
-    
+
                         <div class="A">
                             <div class="a-left-line"></div>
                             <div class="line"></div>
                             <div class="a-right-line"></div>
                         </div>
-    
+
                         <div class="C">
                             <div class="C-inner"></div>
                             <div class="C-whitespace"></div>
                             <div class="line"></div>
                         </div>
                     </a>
-    
+
                     <div id="logo-text">
                         <span class="charcoal"> BUSINESS </span>
                         <span class="green"> ANALYTICS </span>
                         <span class="charcoal"> CLUB </span>
                     </div>
-    
-                    <div id="hamburger-menu">
-                        <div class="h-line"></div>
-                        <div class="h-line"></div>
-                        <div class="h-line"></div>
-                    </div>
-    
                 </div>
-    
-                <div id="nav-items">
-                    <a class="navbar-item" href="./index.html" id="home-tab">Home</a>
-                    <a class="navbar-item" href="./calendar.html" id="calendar-tab">Calendar</a>
-                    <a class="navbar-item" href="./insightteams.html" id="insight-team-tab">Insight Teams</a>
-                    <a class="navbar-item" href="./membership.html" id="membership-tab">Membership</a>
-                    <a class="navbar-item" href="./bacsquared.html" id="bac-squared-tab">BAC<sup>2</sup> Conference</a>
-                </div>
+                <a class="navbar-item-wide" href="./membership.html" id="membership-tab">
+                    Membership
+                </a>
+                <a class="navbar-item-wide" href="./bacsquared.html" id="bac-squared-tab">
+                    BAC<sup>2</sup> Conference
+                </a>
+            </div>
+
         </div>
+
+        <div id="nav-items">
+            <a class="navbar-item" href="./index.html" id="home-tab">Home</a>
+            <a class="navbar-item" href="./calendar.html" id="calendar-tab">Calendar</a>
+            <a class="navbar-item" href="./insightteams.html" id="insight-team-tab">Insight Teams</a>
+            <a class="navbar-item" href="./membership.html" id="membership-tab">Membership</a>
+            <a class="navbar-item" href="./bacsquared.html" id="bac-squared-tab">BAC<sup>2</sup> Conference</a>
+        </div>
+    </div>
 
 		<div id="body">
 
@@ -274,6 +332,20 @@
         
         
         <script>
+
+
+            // function searchFunction() {
+            //     const req = new XMLHttpRequest();
+            //     req.onload = function(){
+            //         console.log("[searchFunction] C")
+            //     };
+            //     req.open('GET', 'AttendanceTracking.csv');
+            //     req.send();
+            // }
+
+            // searchFunction();
+
+
             const submitBtn = document.getElementById('submit-btn');
             const submitBtnSpan = document.querySelector('#submit-btn > span');
             const submitNetID = document.getElementById('membership-input');

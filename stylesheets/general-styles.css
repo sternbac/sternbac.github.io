@@ -25,6 +25,7 @@ html, body {
     background-color: #eeeeee;
     font-family: 'Oswald', sans-serif;
     scroll-behavior: smooth;
+    /* overflow-x: hidden; */
 }
 
 .text {
@@ -97,6 +98,73 @@ html, body {
 
 #bac-squared-tab {
     padding-top: 2px;
+}
+
+
+#mobile-navbar {
+    background-color: inherit;
+    position: relative;
+}
+
+#mobile-navbar > #logo-container {
+    background-color: inherit;
+    position: relative;
+}
+
+#wide-navbar > #logo-container {
+    background-color: inherit;
+    width: fit-content;
+    position: relative;
+    top: -30px;
+}
+
+#wide-navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: inherit;
+    align-content: flex-end;
+    height: 100%;
+}
+
+.navbar-item-wide {
+    box-sizing: border-box;
+    padding: 7px 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 16px;
+    height: 30px;
+    display: block;
+    position: relative;
+    border-bottom: 2px solid #1AB999;
+    border-width: 0;
+    transition: box-shadow 0.5s linear, background-color 0.5s linear;
+    width: 116px;
+    text-align: center;
+}
+
+.navbar-item-wide:hover{
+    background-color: #1AB999;
+    box-shadow: 0 0 10px #1AB999, 0 0 40px #1AB999, 0 0 80px #1AB999;
+}
+
+.navbar-item-wide > #bac-squared-tab {
+    padding-top: 2px;
+}
+
+
+
+@media only screen and (min-width:700px) {
+    #mobile-navbar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    #wide-navbar {
+        display: none;
+    }
 }
 
 /* Hamburger Menu Animations */
@@ -403,6 +471,6 @@ html, body {
 }
 
 a:link, a:visited, a:hover, a:active {
-color: #374C60;
-text-decoration: none;
+    color: #374C60;
+    text-decoration: none;
 }
