@@ -130,7 +130,7 @@ function scroll() {
 
     body.scrollTo(0, body.scrollTop + 50);
 
-    const bodyViewport = body.clientHeight - 20; // -20 cuz padding
+    const bodyViewport = body.clientHeight; // -20 cuz padding
     let bodyOffset = body.scrollTop + bodyViewport;
 
     console.log(subscribeBtnOffset);
