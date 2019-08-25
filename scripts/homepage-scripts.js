@@ -115,7 +115,6 @@ function handleEmailSubmit(event){
 
 const signUpBtn = document.querySelector("#signup-link");
 const subscribeContainer = document.querySelector("#subscribe-container");
-const subscribeBtnOffset = subscribeBtn.getBoundingClientRect()["bottom"] + 200;
 
 signUpBtn.addEventListener('click', () => {
     scroll();
@@ -126,6 +125,8 @@ function scroll() {
         body.scrollTo(0, body.scrollHeight);
         return;
     }
+
+    const subscribeBtnOffset = body.scrollHeight;
 
     body.scrollTo(0, body.scrollTop + 50);
 
