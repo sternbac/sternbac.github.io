@@ -1,7 +1,7 @@
 
 (() => {
 
-    const api = "http://bac-backend.herokuapp.com/calendar/3";
+    const api = "//bac-backend.herokuapp.com/calendar/3";
     const req = new XMLHttpRequest();
     
     req.onreadystatechange = function() {
@@ -94,7 +94,7 @@ function handleEmailSubmit(event){
     const animation = setInterval(animateBtn, time);
 
     const email = document.getElementById("subscribe-input").value;
-    const api = "http://bac-backend.herokuapp.com/subscribe/";
+    const api = "//bac-backend.herokuapp.com/subscribe/";
     const req = new XMLHttpRequest();
     
     req.onreadystatechange = function() {

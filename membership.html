@@ -347,7 +347,7 @@
             function handleMembershipSubmit(event){
                 event.preventDefault();
                 const NetID = document.getElementById("membership-input").value;
-                const api = "http://bac-backend.herokuapp.com/attendance/" + NetID;
+                const api = "//bac-backend.herokuapp.com/attendance/" + NetID;
                 const req = new XMLHttpRequest();
                 
                 req.onreadystatechange = function() {
