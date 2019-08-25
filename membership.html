@@ -306,7 +306,9 @@
                     <span>Submit</span>
                 </div>
                 <div id="reply-status">
-                    <span class="text">You have not attended any BAC meetings.</span>
+                    <span id="attendance-msg" class="text">You have not attended any BAC meetings.</span>
+                    <br>
+                    <span id="additional-info" class="text"></span>
                 </div>
             </form>
 
@@ -333,19 +335,6 @@
         
         <script>
 
-
-            // function searchFunction() {
-            //     const req = new XMLHttpRequest();
-            //     req.onload = function(){
-            //         console.log("[searchFunction] C")
-            //     };
-            //     req.open('GET', 'AttendanceTracking.csv');
-            //     req.send();
-            // }
-
-            // searchFunction();
-
-
             const submitBtn = document.getElementById('submit-btn');
             const submitBtnSpan = document.querySelector('#submit-btn > span');
             const submitNetID = document.getElementById('membership-input');
@@ -357,6 +346,25 @@
 
             function handleMembershipSubmit(event){
                 event.preventDefault();
+                const NetID = document.getElementById("membership-input").value;
+                const api = "http://bac-backend.herokuapp.com/attendance/" + NetID;
+                const req = new XMLHttpRequest();
+                
+                req.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        //console.log(this.responseText);
+                        const response = JSON.parse(this.responseText);
+                        const attendanceMsg = document.querySelector("#attendance-msg");
+                        const additionalInfo = document.querySelector("#additional-info");
+                        attendanceMsg.innerHTML = response["attendanceMsg"];
+                        additionalInfo.innerHTML = response["additionalInfo"];
+                    }
+                };
+
+                req.open('GET', api);
+                req.send();
+                attendanceMsg.innerHTML = "Loading...";
+                additionalInfo.innerHTML = "";
                 reply.style.display = "block";
             }
 

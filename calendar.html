@@ -21,20 +21,29 @@
                 min-height: 150px;
             }
 
-            .months{ /* Needed for animation effects via JS */
-                max-height: 0px;
+            .months { /* Needed for animation effects via JS */
+                height: 0px;
                 overflow: hidden;
                 width:100%;
                 box-sizing: border-box;
+                transition: all 1s ease;
+                opacity: 0;
+            }
+
+            .showing {
+                height: auto;
+                overflow: auto;
+                opacity: 1;
             }
 
             .month {
-                height: 30px;
+                height: auto;
                 border-top: 2px solid #1AB999;
                 padding-left: 30px;
                 background-color: #eeeeee;
                 box-sizing: border-box;
-                line-height: 28px;
+                line-height: 40px;
+                font-size: 20px;
             }
             .month:nth-child(4n){
                 border-bottom-left-radius: 5px;
@@ -179,29 +188,35 @@
                 </div>
 
                 <div id="calendar-content">
-                    <div class="semester" id="fall2018">
-                        <div class="semester-icon"> + </div>
-                        <div class="semester-text">
-                            <span class="text">Fall 2018</span>
+                    <div class="semester" id="fall">
+                        <div class="semester-header" data-sem="fall">
+                            <div class="semester-icon"> + </div>
+                            <div class="semester-text">
+                                <span class="text">Fall 2019</span>
+                            </div>
                         </div>
+                            
                         <div class="months">
-                            <div class="month">September</div>
-                            <div class="month">October</div>
-                            <div class="month">November</div>
-                            <div class="month">December</div>
+                            <div class="month" id="September">September</div>
+                            <div class="month" id="October">October</div>
+                            <div class="month" id="November">November</div>
+                            <div class="month" id="December">December</div>
                         </div>
                     </div>
 
-                    <div class="semester" id="spring2019">
-                        <div class="semester-icon"> + </div>
-                        <div class="semester-text"> 
-                            <span class="text">Spring 2019</span>
+                    <div class="semester" id="spring">
+                        <div class="semester-header" data-sem="spring">
+                            <div class="semester-icon"> + </div>
+                            <div class="semester-text">
+                                <span class="text">Spring 2019</span>
+                            </div>
                         </div>
+
                         <div class="months">
-                            <div class="month">February</div>
-                            <div class="month">March</div>
-                            <div class="month">April</div>
-                            <div class="month">May</div>
+                            <div class="month" id="February">February</div>
+                            <div class="month" id="March">March</div>
+                            <div class="month" id="April">April</div>
+                            <div class="month" id="May">May</div>
                         </div>
                     </div>
                 </div>
@@ -228,39 +243,102 @@
 
 		</div>
         <script>
-            const semesters = document.querySelectorAll(".semester");
+            const activeMonths = [ 'February', 'March', 'April', 'September', 'October', 'November', 'December'];
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            function get_month_name(monthNumber) {
+                return months[monthNumber];
+            }
+
+            (() => {
+                const api = "http://bac-backend.herokuapp.com/calendar/3";
+                const req = new XMLHttpRequest();
+
+                let monthDict = {};
+                
+                req.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        console.log(this.responseText);
+                        const response = JSON.parse(this.responseText);
+                        const items = response["data"];
+                        for(let i = 0; i < items.length; i++){
+                            let entry = items[i];
+                            if(activeMonths.includes(entry.month)){
+                                let _monthContainer = document.getElementById(`${entry.month}`);
+                                let eventString = `
+                                    <div class="content-block-container">
+                                        <div class="overlay"></div>
+                                        <div class="content-block">
+                                            <div class="content-block-header">
+                                                ${entry.title}
+                                            </div>
+                                            <div class="content-block-body">
+                                                <img src="icons/vip-pass.svg" class="content-icon">
+                                                ${entry.time}
+                                                <br>
+                                                ${entry.location}
+                                            </div>
+                                        </div>
+                                    </div>`;
+                                _monthContainer.insertAdjacentHTML('beforeend', eventString);
+                            }
+
+                        }
+                        // Object.keys(monthDict).forEach(function(month) {
+                        //     if(activeMonths.contains(month)){
+                        //         let monthElement = document.getElementById(month);
+                        //         for(let i = 0; i < monthDict[month].length; i++){
+                        //             let entry = monthDict[month][i];
+
+                        //         }
+                        //     }
+
+                        // });
+                        // const eventsContainer = document.getElementById("events-content");
+                        // for(let i = 0; i < items.length; i++){
+                        //     const item = items[i];
+                        //     const itemString = `
+                        //         <div class="content-block-container">
+                        //             <div class="overlay"></div>
+                        //             <div class="content-block">
+                        //                 <div class="content-block-header">
+                        //                     ${item.title}
+                        //                 </div>
+                        //                 <div class="content-block-body">
+                        //                     <img src="icons/vip-pass.svg" class="content-icon">
+                        //                     ${item.time}
+                        //                     <br>
+                        //                     ${item.location}
+                        //                 </div>
+                        //             </div>
+                        //         </div>`;
+                        //         eventsContainer.insertAdjacentHTML('beforeend', itemString);
+                            
+                        // }
+                    }
+                };
+
+                req.open('GET', api);
+                req.send();
+            })();
+
+
+            const semesters = document.querySelectorAll(".semester > .semester-header");
             semesters.forEach((s) => {
                 s.addEventListener('click', () => {
                     s.classList.toggle("pressed-semester");
-                    let months = document.querySelector(`#${s.id} > .months`);
-                    let icon = document.querySelector(`#${s.id} > .semester-icon`);
+                    let sem = s.dataset.sem;
+                    console.log(sem);
+                    let months = document.querySelector(`#${sem} .months`);
+                    console.log(months);
+                    let icon = document.querySelector(`#${sem} .semester-icon`);
+                    console.log(icon);
 
                     if(!s.classList.contains("pressed-semester")){
                         icon.innerHTML = "+";
                         months.classList.remove("showing");
-                        months.style["overflow"] = "hidden";
-                        months.animate([
-                            { opacity: 1, height: "120px"},
-                            { opacity: 0, height: "0"}
-                        ], {
-                        fill: 'both',
-                        duration: 500
-                        });
-                        setTimeout(() => {
-                            months.style["max-height"] = "0";
-                        }, 500);
                     } else {
                         icon.innerHTML = "-";
                         months.classList.add("showing");
-                        months.style["max-height"] = "120px";
-                        months.style["overflow"] = "auto";
-                        months.animate([
-                            { opacity: 0, height: "0"},
-                            { opacity: 1,  height: "120px"}
-                        ], {
-                        fill: 'both',
-                        duration: 500
-                        });
 				    }
                 });
             });

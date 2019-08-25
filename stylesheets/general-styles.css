@@ -140,8 +140,9 @@ html, body {
     border-bottom: 2px solid #1AB999;
     border-width: 0;
     transition: box-shadow 0.5s linear, background-color 0.5s linear;
-    width: 116px;
+    width: 128px;
     text-align: center;
+    font-weight: bold;
 }
 
 .navbar-item-wide:hover{
@@ -262,6 +263,7 @@ html, body {
     color: white;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    font-weight: bold;
     
 }
 
@@ -293,6 +295,7 @@ html, body {
     line-height: 50px;
     background-color: #374C60;
     padding: 0 15px;
+    font-weight: bold;
 }
 
 
@@ -315,6 +318,7 @@ html, body {
     /* line-height: 50px; */
     background-color: #eeeeee;
     padding: 0 20px;
+    font-weight: bold;
 }
 
 .sub-underline-container {
@@ -406,20 +410,22 @@ html, body {
     background-color: #eeeeee;
     border-radius: 5px;
     margin: 10px auto;
-    max-width: 500px;
+    max-width: 800px;
 }
 
 .semester-icon, .semester-text {
     display: inline-block;
-    font-size: 20px;
-    line-height: 30px;
-    height:30px;
+    font-size: 25px;
+    line-height: 40px;
+    height: 40px;
     margin: 0 10px;
 
 }
 
 .pressed-semester {
     background-color: #1AB999;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 /* Footer */

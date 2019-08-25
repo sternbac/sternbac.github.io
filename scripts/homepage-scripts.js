@@ -1,18 +1,41 @@
 
 (() => {
-    // const Http = new XMLHttpRequest();
-    // const url = 'JSONs/executive-board.json';
-    // Http.open("GET", url);
-    // Http.send();
 
-    // Http.onreadystatechange = (e) => {
-    // console.log(Http.responseText);
-    // }
+    const api = "http://bac-backend.herokuapp.com/calendar/3";
+    const req = new XMLHttpRequest();
+    
+    req.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+            const response = JSON.parse(this.responseText);
+            const items = response["data"];
+            const eventsContainer = document.getElementById("events-content");
+            for(let i = 0; i < items.length; i++){
+                const item = items[i];
+                const itemString = `
+                    <div class="content-block-container">
+                        <div class="overlay"></div>
+                        <div class="content-block">
+                            <div class="content-block-header">
+                                ${item.title}
+                            </div>
+                            <div class="content-block-body">
+                                <img src="icons/vip-pass.svg" class="content-icon">
+                                ${item.time}
+                                <br>
+                                ${item.location}
+                            </div>
+                        </div>
+                    </div>`;
+                    eventsContainer.insertAdjacentHTML('beforeend', itemString);
+                
+            }
+        }
+    };
 
-    // fetch("JSONs/executive-board.json",{mode: 'cors'})
-    //     .then(r => {
-    //         console.log(r);
-    //     })
+    req.open('GET', api);
+    req.send();
+
 
     const members = board["board"];
     const membersContainer = document.querySelector("#board-container > .members");
@@ -66,11 +89,25 @@ function animateBtn() {
 
 function handleEmailSubmit(event){
     event.preventDefault();
+    let doneSubmitting = false;
     animateBtn();
-    setInterval(() => {
-        animateBtn();
-    }, time);
+    const animation = setInterval(animateBtn, time);
+
+    const email = document.getElementById("subscribe-input").value;
+    const api = "http://bac-backend.herokuapp.com/subscribe/";
+    const req = new XMLHttpRequest();
     
+    req.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+            clearInterval(animation);
+            subscribeBtn.style.display = "none";
+        }
+    };
+
+    req.open('POST', api, true);
+    req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    req.send(`email=${email}`);
     thanksSub.style.display = "block";
     subscribeEmail.style.display = "none";
     subscribeBtnSpan.style.display = "none";
