@@ -260,7 +260,7 @@ html, body {
     text-align: center;
     font-size: 20px;
     background-color: #1AB999;
-    color: white;
+    color: black;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     font-weight: bold;
@@ -338,6 +338,7 @@ html, body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .member {
@@ -351,18 +352,6 @@ html, body {
     .member {
         width: 50%;
     }
-}
-
-#board-container .member:nth-child(3n) {
-    background-color: rgba(55, 76, 96, 0.95);
-}
-
-#board-container .member:nth-child(3n + 1) {
-    background-color: rgba(55, 76, 96, 0.75);
-}
-
-#board-container .member:nth-child(3n + 2) {
-    background-color: rgba(55, 76, 96, 0.85);
 }
 
 .member-img {

@@ -4,12 +4,15 @@
     const api = "//bac-backend.herokuapp.com/calendar/3";
     const req = new XMLHttpRequest();
     
+    const loading = document.querySelector(".loading");
+
     req.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText);
+            //console.log(this.responseText);
             const response = JSON.parse(this.responseText);
             const items = response["data"];
             const eventsContainer = document.getElementById("events-content");
+            loading.style.display = 'none';
             for(let i = 0; i < items.length; i++){
                 const item = items[i];
                 const itemString = `
@@ -27,15 +30,14 @@
                             </div>
                         </div>
                     </div>`;
-                    eventsContainer.insertAdjacentHTML('beforeend', itemString);
-                
+                eventsContainer.insertAdjacentHTML('beforeend', itemString);
             }
         }
     };
 
     req.open('GET', api);
     req.send();
-
+    loading.style.display = 'block';
 
     const members = board["board"];
     const membersContainer = document.querySelector("#board-container > .members");
@@ -43,7 +45,7 @@
         const member = members[i];
         const memberString = `
             <div class="member">
-            <img class="member-img" src="images/${member.img}">
+            <img class="member-img" src="images/board/${member.img}">
             <div class="member-content">
                 <div class="member-info">
                     <div class="member-name">
@@ -102,13 +104,13 @@ function handleEmailSubmit(event){
             console.log(this.responseText);
             clearInterval(animation);
             subscribeBtn.style.display = "none";
+            thanksSub.style.display = "block";
         }
     };
 
     req.open('POST', api, true);
     req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     req.send(`email=${email}`);
-    thanksSub.style.display = "block";
     subscribeEmail.style.display = "none";
     subscribeBtnSpan.style.display = "none";
 }
@@ -130,12 +132,8 @@ function scroll() {
 
     body.scrollTo(0, body.scrollTop + 50);
 
-    const bodyViewport = body.clientHeight; // -20 cuz padding
+    const bodyViewport = body.clientHeight;
     let bodyOffset = body.scrollTop + bodyViewport;
-
-    console.log(subscribeBtnOffset);
-    console.log(bodyOffset);
-
 
     if(subscribeBtnOffset <= bodyOffset){
         return;

@@ -50,24 +50,47 @@
             }
 
             .projects{ /* Needed for animation effects via JS */
-                max-height: 0px;
+                height: 0px;
                 overflow: hidden;
                 width:100%;
                 box-sizing: border-box;
+                transition: all 1s ease;
+                opacity: 0;
+            }
+
+            .showing {
+                height: auto;
+                overflow: auto;
+                opacity: 1;
             }
 
             .project {
-                height: 30px;
+                height: auto;
                 border-top: 2px solid #1AB999;
                 padding-left: 30px;
                 background-color: #eeeeee;
                 box-sizing: border-box;
-                line-height: 28px;
+                line-height: 40px;
+                font-size: 20px;
             }
             .project:nth-child(5n){
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
             }
+
+
+            #insight-teams-display .member:nth-child(3n) {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+
+            #insight-teams-display .member:nth-child(3n + 1) {
+                background-color: rgba(0, 0, 0, 0.15);
+            }
+
+            #insight-teams-display .member:nth-child(3n + 2) {
+                background-color: rgba(0, 0, 0, 0.05);
+            }
+
         </style>
   </head>
   <body>
@@ -187,7 +210,7 @@
                     <div class="content-block-body">
                         <img src="icons/book.svg" class="content-icon">
                         <span class="text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu justo sit amet lacus molestie tincidunt eget vel ex.
+                            Applications Closed
                         </span>
                     </div>
                 </div>
@@ -215,153 +238,8 @@
                     <div class="sub-header-underline"></div>
                 </div>
 
-                <div class="team-header">
-                    <span class="text">Team 1 </span>
-                </div>
-                <div class="members">
-
-                    <div class="member">
-                        <img class="member-img" src="images/stock_photo.jpg">
-                        <div class="member-content">
-                            <div class="member-info charcoal">
-                                <div class="member-name">
-                                    <span class="text"> [Member Name] </span>
-                                </div>
-                                <br>
-                                <div class="member-bio">
-                                    <span class="text">[Member Title]</span>
-                                    <br>
-                                    <span class="text">[Member School Info]</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="member">
-                        <img class="member-img" src="images/stock_photo.jpg">
-                        <div class="member-content">
-                            <div class="member-info charcoal">
-                                <div class="member-name">
-                                    <span class="text"> [Member Name] </span>
-                                </div>
-                                <br>
-                                <div class="member-bio">
-                                    <span class="text">[Member Title]</span>
-                                    <br>
-                                    <span class="text">[Member School Info]</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="member">
-                        <img class="member-img" src="images/stock_photo.jpg">
-                        <div class="member-content">
-                            <div class="member-info charcoal">
-                                <div class="member-name">
-                                    <span class="text"> [Member Name] </span>
-                                </div>
-                                <br>
-                                <div class="member-bio">
-                                    <span class="text">[Member Title]</span>
-                                    <br>
-                                    <span class="text">[Member School Info]</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="member">
-                        <img class="member-img" src="images/stock_photo.jpg">
-                        <div class="member-content">
-                            <div class="member-info charcoal">
-                                <div class="member-name">
-                                    <span class="text"> [Member Name] </span>
-                                </div>
-                                <br>
-                                <div class="member-bio">
-                                    <span class="text">[Member Title]</span>
-                                    <br>
-                                    <span class="text">[Member School Info]</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="team-header">
-                    <span class="text">Team 2 </span>
-                </div>
-                <div class="members">
-
-                    <div class="member">
-                        <img class="member-img" src="images/stock_photo.jpg">
-                        <div class="member-content">
-                            <div class="member-info charcoal">
-                                <div class="member-name">
-                                    <span class="text"> [Member Name] </span>
-                                </div>
-                                <br>
-                                <div class="member-bio">
-                                    <span class="text">[Member Title]</span>
-                                    <br>
-                                    <span class="text">[Member School Info]</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="member">
-                        <img class="member-img" src="images/stock_photo.jpg">
-                        <div class="member-content">
-                            <div class="member-info charcoal">
-                                <div class="member-name">
-                                    <span class="text"> [Member Name] </span>
-                                </div>
-                                <br>
-                                <div class="member-bio">
-                                    <span class="text">[Member Title]</span>
-                                    <br>
-                                    <span class="text">[Member School Info]</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="member">
-                        <img class="member-img" src="images/stock_photo.jpg">
-                        <div class="member-content">
-                            <div class="member-info charcoal">
-                                <div class="member-name">
-                                    <span class="text"> [Member Name] </span>
-                                </div>
-                                <br>
-                                <div class="member-bio">
-                                    <span class="text">[Member Title]</span>
-                                    <br>
-                                    <span class="text">[Member School Info]</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="member">
-                        <img class="member-img" src="images/stock_photo.jpg">
-                        <div class="member-content">
-                            <div class="member-info charcoal">
-                                <div class="member-name">
-                                    <span class="text"> [Member Name] </span>
-                                </div>
-                                <br>
-                                <div class="member-bio">
-                                    <span class="text">[Member Title]</span>
-                                    <br>
-                                    <span class="text">[Member School Info]</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div id="insight-teams-display">
+                    <!-- Insight Teams Populate Here -->
                 </div>
             </div>
 
@@ -373,15 +251,16 @@
 
                 <div id="past-projects-content">
 
-                    <div class="semester" id="spring2017">
-                        <div class="semester-icon"> + </div>
-                        <div class="semester-text"> Spring 2017 </div>
+                    <div class="semester" id="spring">
+                        <div class="semester-header" data-sem="spring">
+                            <div class="semester-icon"> + </div>
+                            <div class="semester-text">
+                                <span class="text">Spring 2017</span>
+                            </div>
+                        </div>
+
                         <div class="projects">
-                            <div class="project">Project 1</div>
-                            <div class="project">Project 2</div>
-                            <div class="project">Project 3</div>
-                            <div class="project">Project 4</div>
-                            <div class="project">Project 5</div>
+
                         </div>
                     </div>
                 </div>
@@ -405,46 +284,80 @@
             </div>
 
         </div>
-        
-            
+
+        <script src="JSONs/insight-projects.js"></script>
+        <script src="JSONs/insight-teams.js"></script>
         <script>
-            const semesters = document.querySelectorAll(".semester");
+
+            const semesters = document.querySelectorAll(".semester > .semester-header");
             semesters.forEach((s) => {
                 s.addEventListener('click', () => {
                     s.classList.toggle("pressed-semester");
-                    let projects = document.querySelector(`#${s.id} > .projects`);
-                    let icon = document.querySelector(`#${s.id} > .semester-icon`);
+                    let sem = s.dataset.sem;
+                    console.log(sem);
+                    let months = document.querySelector(`#${sem} .projects`);
+                    console.log(months);
+                    let icon = document.querySelector(`#${sem} .semester-icon`);
+                    console.log(icon);
 
                     if(!s.classList.contains("pressed-semester")){
                         icon.innerHTML = "+";
-                        projects.classList.remove("showing");
-                        projects.style["overflow"] = "hidden";
-                        projects.animate([
-                            { opacity: 1, height: "150px"},
-                            { opacity: 0, height: "0"}
-                        ], {
-                        fill: 'both',
-                        duration: 500
-                        });
-                        setTimeout(() => {
-                            projects.style["max-height"] = "0";
-                        }, 500);
+                        months.classList.remove("showing");
                     } else {
                         icon.innerHTML = "-";
-                        projects.classList.add("showing");
-                        projects.style["max-height"] = "150px";
-                        projects.style["overflow"] = "auto";
-                        projects.animate([
-                            { opacity: 0, height: "0"},
-                            { opacity: 1,  height: "150px"}
-                        ], {
-                        fill: 'both',
-                        duration: 500
-                        });
-                    }
+                        months.classList.add("showing");
+				    }
                 });
             });
+
+            const teams = insightTeams["teams"];
+            const membersContainer = document.querySelector("#insight-teams-display");
+            for(let i = 0; i < teams.length; i++){
+                const members = teams[i]["members"];
+                const teamHeader = `
+                    <div class="team-header">
+                        <span class="text">Team ${i + 1} </span>
+                    </div>`;
+                membersContainer.insertAdjacentHTML('beforeend', teamHeader);
+                let fullMembers = "<div class='members'>";
+                for(let j = 0; j < members.length; j++){
+                    const member = members[j];
+                    const memberString = `
+                        <div class="member">
+                        <img class="member-img" src="images/insight/${member.img}">
+                        <div class="member-content">
+                            <div class="member-info charcoal">
+                                <div class="member-name">
+                                    <span class="text"> ${member.name} </span>
+                                </div>
+                                <div class="member-bio">
+                                    <span class="text">${member.school} </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+                    fullMembers += memberString;
+                    
+                }
+                fullMembers += "</div>";
+                membersContainer.insertAdjacentHTML('beforeend', fullMembers);
+            }
+
+            const projectsContainer = document.querySelector("#past-projects-content .projects");
+
+            const items = insightProjects["projects"];
+            for(let i = 0; i < items.length; i++){
+                let entry = items[i];
+                let eventString = `
+                    <div class="project">
+                        <a href="${entry.href}" target="_blank">${entry.text}</a>
+                    </div>`;
+                    projectsContainer.insertAdjacentHTML('beforeend', eventString);
+                
+            }
+
         </script>
+
         <script src="scripts/general-scripts.js"></script>
   </body>
 </html>

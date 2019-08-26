@@ -344,6 +344,9 @@
                 handleMembershipSubmit(event);
             });
 
+            const attendanceMsg = document.querySelector("#attendance-msg");
+            const additionalInfo = document.querySelector("#additional-info");
+
             function handleMembershipSubmit(event){
                 event.preventDefault();
                 const NetID = document.getElementById("membership-input").value;
@@ -354,8 +357,6 @@
                     if (this.readyState == 4 && this.status == 200) {
                         //console.log(this.responseText);
                         const response = JSON.parse(this.responseText);
-                        const attendanceMsg = document.querySelector("#attendance-msg");
-                        const additionalInfo = document.querySelector("#additional-info");
                         attendanceMsg.innerHTML = response["attendanceMsg"];
                         additionalInfo.innerHTML = response["additionalInfo"];
                     }

@@ -8,18 +8,32 @@ var board = {
 			"img": "caitlyn.jpg"
 		},
 		{
+			"name": "Lawrence Langman",
+			"title": "Vice President",
+			"school": "Stern Class of 2021",
+			"degree": "B.S. Finance",
+			"img": "lawrence.png"
+		},
+		{
+			"name": "Nicole Ng",
+			"title": "VP of Insight Team",
+			"school": "Stern Class of 2020",
+			"degree": "B.S. Marketing and Global Business",
+			"img": "nicole.jpg"
+		},
+		{
+			"name": "Jonathan Edelstein ",
+			"title": "VP of Outreach",
+			"school": "Stern Class of 2021",
+			"degree": "B.S. Finance & Computing and Data Science",
+			"img": "jonathan.jpg"
+		},
+		{
 			"name": "Neila Zniber",
 			"title": "VP of Operations",
 			"school": "Stern Class of 2021",
 			"degree": "B.S. Finance & Data Science",
 			"img": "neila.jpg"
-		},
-		{
-			"name": "Abhinav Reddy",
-			"title": "VP of Workshops",
-			"school": "Stern Class of 2020",
-			"degree": "B.S. Finance & Data Science",
-			"img": "abhinav.jpg"
 		},
 		{
 			"name": "Virpartap Grewal",
@@ -29,11 +43,11 @@ var board = {
 			"img": "virpartap.jpg"
 		},
 		{
-			"name": "Nicole Ng",
-			"title": "VP of Insight Team",
+			"name": "Abhinav Reddy",
+			"title": "VP of Workshops",
 			"school": "Stern Class of 2020",
-			"degree": "B.S. Marketing and Global Business",
-			"img": "nicole.jpg"
+			"degree": "B.S. Finance & Data Science",
+			"img": "abhinav.jpg"
 		},
 		{
 			"name": "Adwyn Viera",
@@ -69,20 +83,6 @@ var board = {
 			"school": "CAS Class of 2020",
 			"degree": "B.S. Computer Science & Mathematics",
 			"img": "edwin.jpg"
-		},
-		{
-			"name": "Lawrence Langman",
-			"title": "?",
-			"school": "Stern Class of 2021",
-			"degree": "B.S. Finance",
-			"img": "lawrence.png"
-		},
-		{
-			"name": "Jonathan Edelstein ",
-			"title": "?",
-			"school": "Stern Class of 2021",
-			"degree": "B.S. Finance & Computing and Data Science",
-			"img": "jonathan.jpg"
-		},
+		}
 	]
 }
