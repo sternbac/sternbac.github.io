@@ -4,119 +4,12 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	    <title>BAC - Membership</title>
-		<link rel="stylesheet" type="text/css" href="stylesheets/bac-logo.css?v=4">
-		<link rel="stylesheet" type="text/css" href="stylesheets/general-styles.css?v=4">
+		<link rel="stylesheet" type="text/css" href="stylesheets/bac-logo.css?v=5">
+        <link rel="stylesheet" type="text/css" href="stylesheets/general-styles.css?v=5">
+        <link rel="stylesheet" type="text/css" href="stylesheets/membership.css?v=5">
         <script src="https://kit.fontawesome.com/65e5c6d42f.js"></script>
         <!-- Include the polyfill -->
         <script src="scripts/web-animations-js-2.3.1/web-animations.min.js"></script>
-        <style>
-            #about {
-                background-color: #374C60;
-                margin: 40px 0;
-            }
-
-            #about-content, #event-content {
-                padding: 15px 50px 30px 50px;
-                color: white;
-                font-size: 18px;
-            }
-
-            #about-content, #schedule-content {
-                max-width: 600px;
-                margin: auto;
-            }
-
-            #event-content {
-                color: #374C60;
-                text-align: center;
-            }
-
-            table {
-                margin: 20px 0;
-                width: 100%;
-                border-collapse: collapse;
-                border-spacing: 0;
-                vertical-align: baseline;
-                font-size: 20px;
-                color: white;
-            }
-
-            table td {
-                padding: 0.75em 0.75em;
-                vertical-align: baseline;
-            }
-
-            table tbody tr:nth-child(2n + 1) {
-                background-color: rgba(144, 144, 144, 0.25);
-            }
-
-            table tbody tr {
-                border: solid 1px #fff;
-                border-left: 0;
-                border-right: 0;
-            }
-
-            .sub-header {
-                line-height: 50px;
-            }
-
-
-            #membership-container {
-                margin: 40px auto;
-                width: 80%;
-                max-width: 400px;
-            }
-
-            #membership-input {
-                width: 100%;
-                margin-top:10px;
-                background-color: #f0f0f0;
-                color: #374C60;
-                outline: none;
-                border: 2px dotted #374C60;
-                padding: 5px;
-                height: 45px;
-                line-height: 35px;
-                font-size: 20px;
-                border-radius: 5px;
-            }
-
-            #membership-input::placeholder {
-                color: #374C60;
-            }
-
-            #membership-input:focus {
-                border-color: #1AB999;
-            }
-
-            #submit-btn {
-                color: #374C60;
-                text-align: center;
-                background-color: #1AB999;
-                margin: 5px 0;
-                height: 45px;
-                line-height: 45px;
-                font-size: 20px;
-                font-weight: bold;
-                box-sizing: border-box;
-
-            }
-
-            #submit-btn > span {
-                width: 100%;
-                height:100%;
-                display: block;
-                color: white;
-            }
-
-            #reply-status {
-                display: none;
-                color:#374C60;
-                font-size: 18px;
-                text-align: center;
-            }
-
-        </style>
   </head>
   <body>
     <div id="navbar">
@@ -332,44 +225,7 @@
 
         </div>
         
-        
-        <script>
-
-            const submitBtn = document.getElementById('submit-btn');
-            const submitBtnSpan = document.querySelector('#submit-btn > span');
-            const submitNetID = document.getElementById('membership-input');
-            const reply = document.getElementById('reply-status');
-
-            submitBtn.addEventListener('click', (event) => {
-                handleMembershipSubmit(event);
-            });
-
-            const attendanceMsg = document.querySelector("#attendance-msg");
-            const additionalInfo = document.querySelector("#additional-info");
-
-            function handleMembershipSubmit(event){
-                event.preventDefault();
-                const NetID = document.getElementById("membership-input").value;
-                const api = "//bac-backend.herokuapp.com/attendance/" + NetID;
-                const req = new XMLHttpRequest();
-                
-                req.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                        //console.log(this.responseText);
-                        const response = JSON.parse(this.responseText);
-                        attendanceMsg.innerHTML = response["attendanceMsg"];
-                        additionalInfo.innerHTML = response["additionalInfo"];
-                    }
-                };
-
-                req.open('GET', api);
-                req.send();
-                attendanceMsg.innerHTML = "Loading...";
-                additionalInfo.innerHTML = "";
-                reply.style.display = "block";
-            }
-
-        </script>
+        <script src="scripts/membership.js"></script>
         <script src="scripts/general-scripts.js"></script>
   </body>
 </html>

@@ -4,94 +4,12 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	    <title>BAC - Insight Teams</title>
-		<link rel="stylesheet" type="text/css" href="stylesheets/bac-logo.css?v=4">
-		<link rel="stylesheet" type="text/css" href="stylesheets/general-styles.css?v=4">
+		<link rel="stylesheet" type="text/css" href="stylesheets/bac-logo.css?v=5">
+        <link rel="stylesheet" type="text/css" href="stylesheets/general-styles.css?v=5">
+        <link rel="stylesheet" type="text/css" href="stylesheets/insightteams.css?v=5">
         <script src="https://kit.fontawesome.com/65e5c6d42f.js"></script>
         <!-- Include the polyfill -->
         <script src="scripts/web-animations-js-2.3.1/web-animations.min.js"></script>
-        <style>
-            
-            #about {
-                background-color: #374C60;
-                margin: 40px 0;
-            }
-
-            #about-content {
-                padding: 15px 50px 30px 50px;
-                color: white;
-                font-size: 18px;
-                max-width: 600px;
-                margin: auto;
-            }
-
-            #insight-teams {
-                margin: 40px 0;
-            }
-
-            .team-header {
-                font-size: 22px;
-                color:#374C60;
-                text-align: center;
-                height: 50px;
-                line-height: 50px;
-                background-color: #eeeeee;
-                padding: 0 20px;
-                font-weight: bold;
-                width: 100%;
-                box-sizing: border-box;
-            }
-
-            #past-projects {
-                background-color: #374C60;
-                box-sizing: border-box;
-                padding: 10px;
-                min-height: 150px;
-                margin: 40px 0;
-            }
-
-            .projects{ /* Needed for animation effects via JS */
-                height: 0px;
-                overflow: hidden;
-                width:100%;
-                box-sizing: border-box;
-                transition: all 1s ease;
-                opacity: 0;
-            }
-
-            .showing {
-                height: auto;
-                overflow: auto;
-                opacity: 1;
-            }
-
-            .project {
-                height: auto;
-                border-top: 2px solid #1AB999;
-                padding-left: 30px;
-                background-color: #eeeeee;
-                box-sizing: border-box;
-                line-height: 40px;
-                font-size: 20px;
-            }
-            .project:nth-child(5n){
-                border-bottom-left-radius: 5px;
-                border-bottom-right-radius: 5px;
-            }
-
-
-            #insight-teams-display .member:nth-child(3n) {
-                background-color: rgba(0, 0, 0, 0.1);
-            }
-
-            #insight-teams-display .member:nth-child(3n + 1) {
-                background-color: rgba(0, 0, 0, 0.15);
-            }
-
-            #insight-teams-display .member:nth-child(3n + 2) {
-                background-color: rgba(0, 0, 0, 0.05);
-            }
-
-        </style>
   </head>
   <body>
     <div id="navbar">
@@ -287,76 +205,7 @@
 
         <script src="JSONs/insight-projects.js"></script>
         <script src="JSONs/insight-teams.js"></script>
-        <script>
-
-            const semesters = document.querySelectorAll(".semester > .semester-header");
-            semesters.forEach((s) => {
-                s.addEventListener('click', () => {
-                    s.classList.toggle("pressed-semester");
-                    let sem = s.dataset.sem;
-                    console.log(sem);
-                    let months = document.querySelector(`#${sem} .projects`);
-                    console.log(months);
-                    let icon = document.querySelector(`#${sem} .semester-icon`);
-                    console.log(icon);
-
-                    if(!s.classList.contains("pressed-semester")){
-                        icon.innerHTML = "+";
-                        months.classList.remove("showing");
-                    } else {
-                        icon.innerHTML = "-";
-                        months.classList.add("showing");
-				    }
-                });
-            });
-
-            const teams = insightTeams["teams"];
-            const membersContainer = document.querySelector("#insight-teams-display");
-            for(let i = 0; i < teams.length; i++){
-                const members = teams[i]["members"];
-                const teamHeader = `
-                    <div class="team-header">
-                        <span class="text">Team ${i + 1} </span>
-                    </div>`;
-                membersContainer.insertAdjacentHTML('beforeend', teamHeader);
-                let fullMembers = "<div class='members'>";
-                for(let j = 0; j < members.length; j++){
-                    const member = members[j];
-                    const memberString = `
-                        <div class="member">
-                        <img class="member-img" src="images/insight/${member.img}">
-                        <div class="member-content">
-                            <div class="member-info charcoal">
-                                <div class="member-name">
-                                    <span class="text"> ${member.name} </span>
-                                </div>
-                                <div class="member-bio">
-                                    <span class="text">${member.school} </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>`;
-                    fullMembers += memberString;
-                    
-                }
-                fullMembers += "</div>";
-                membersContainer.insertAdjacentHTML('beforeend', fullMembers);
-            }
-
-            const projectsContainer = document.querySelector("#past-projects-content .projects");
-
-            const items = insightProjects["projects"];
-            for(let i = 0; i < items.length; i++){
-                let entry = items[i];
-                let eventString = `
-                    <div class="project">
-                        <a href="${entry.href}" target="_blank">${entry.text}</a>
-                    </div>`;
-                    projectsContainer.insertAdjacentHTML('beforeend', eventString);
-                
-            }
-
-        </script>
+        <script src="scripts/insightteams.js"></script>
 
         <script src="scripts/general-scripts.js"></script>
   </body>

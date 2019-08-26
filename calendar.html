@@ -4,57 +4,12 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	    <title>BAC - Calendar</title>
-		<link rel="stylesheet" type="text/css" href="stylesheets/bac-logo.css?v=4">
-		<link rel="stylesheet" type="text/css" href="stylesheets/general-styles.css?v=4">
+		<link rel="stylesheet" type="text/css" href="stylesheets/bac-logo.css?v=5">
+        <link rel="stylesheet" type="text/css" href="stylesheets/general-styles.css?v=5">
+        <link rel="stylesheet" type="text/css" href="stylesheets/calendar.css?v=5">
         <script src="https://kit.fontawesome.com/65e5c6d42f.js"></script>
         <!-- Include the polyfill -->
         <script src="scripts/web-animations-js-2.3.1/web-animations.min.js"></script>
-        <style>
-            #calendar {
-                margin: 40px 0;
-            }
-
-            #calendar-content {
-                background-color: #374C60;
-                box-sizing: border-box;
-                padding: 10px;
-                min-height: 150px;
-            }
-
-            .months { /* Needed for animation effects via JS */
-                height: 0px;
-                overflow: hidden;
-                width:100%;
-                box-sizing: border-box;
-                transition: all 1s ease;
-                opacity: 0;
-            }
-
-            .showing {
-                height: auto;
-                overflow: auto;
-                opacity: 1;
-            }
-
-            .month {
-                height: auto;
-                border-top: 2px solid #1AB999;
-                padding-left: 30px;
-                background-color: #eeeeee;
-                box-sizing: border-box;
-                line-height: 40px;
-                font-size: 20px;
-            }
-            .month:nth-child(4n){
-                border-bottom-left-radius: 5px;
-                border-bottom-right-radius: 5px;
-            }
-
-            #space {
-                height: calc(100% - 500px);
-            }
-            
-        </style>
   </head>
   <body>
     <div id="navbar">
@@ -242,75 +197,7 @@
 			</div>
 
 		</div>
-        <script>
-            const activeMonths = [ 'February', 'March', 'April', 'September', 'October', 'November', 'December'];
-            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-            function get_month_name(monthNumber) {
-                return months[monthNumber];
-            }
-
-            (() => {
-                const api = "//bac-backend.herokuapp.com/calendar/3";
-                const req = new XMLHttpRequest();
-
-                let monthDict = {};
-                
-                req.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                        console.log(this.responseText);
-                        const response = JSON.parse(this.responseText);
-                        const items = response["data"];
-                        for(let i = 0; i < items.length; i++){
-                            let entry = items[i];
-                            if(activeMonths.includes(entry.month)){
-                                let _monthContainer = document.getElementById(`${entry.month}`);
-                                let eventString = `
-                                    <div class="content-block-container">
-                                        <div class="overlay"></div>
-                                        <div class="content-block">
-                                            <div class="content-block-header">
-                                                ${entry.title}
-                                            </div>
-                                            <div class="content-block-body">
-                                                <img src="icons/vip-pass.svg" class="content-icon">
-                                                ${entry.time}
-                                                <br>
-                                                ${entry.location}
-                                            </div>
-                                        </div>
-                                    </div>`;
-                                _monthContainer.insertAdjacentHTML('beforeend', eventString);
-                            }
-                        }
-                    }
-                };
-
-                req.open('GET', api);
-                req.send();
-            })();
-
-
-            const semesters = document.querySelectorAll(".semester > .semester-header");
-            semesters.forEach((s) => {
-                s.addEventListener('click', () => {
-                    s.classList.toggle("pressed-semester");
-                    let sem = s.dataset.sem;
-                    console.log(sem);
-                    let months = document.querySelector(`#${sem} .months`);
-                    console.log(months);
-                    let icon = document.querySelector(`#${sem} .semester-icon`);
-                    console.log(icon);
-
-                    if(!s.classList.contains("pressed-semester")){
-                        icon.innerHTML = "+";
-                        months.classList.remove("showing");
-                    } else {
-                        icon.innerHTML = "-";
-                        months.classList.add("showing");
-				    }
-                });
-            });
-        </script>
+        <script src="scripts/calendar.js"></script>
         <script src="scripts/general-scripts.js"></script>
   </body>
 </html>

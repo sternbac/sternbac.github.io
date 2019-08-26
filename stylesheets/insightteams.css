@@ -1,0 +1,79 @@
+#about {
+    background-color: #374C60;
+    margin: 40px 0;
+}
+
+#about-content {
+    padding: 15px 50px 30px 50px;
+    color: white;
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+}
+
+#insight-teams {
+    margin: 40px 0;
+}
+
+.team-header {
+    font-size: 22px;
+    color:#374C60;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    background-color: #eeeeee;
+    padding: 0 20px;
+    font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#past-projects {
+    background-color: #374C60;
+    box-sizing: border-box;
+    padding: 10px;
+    min-height: 150px;
+    margin: 40px 0;
+}
+
+.projects{ /* Needed for animation effects via JS */
+    height: 0px;
+    overflow: hidden;
+    width:100%;
+    box-sizing: border-box;
+    transition: all 1s ease;
+    opacity: 0;
+}
+
+.showing {
+    height: auto;
+    overflow: auto;
+    opacity: 1;
+}
+
+.project {
+    height: auto;
+    border-top: 2px solid #1AB999;
+    padding-left: 30px;
+    background-color: #eeeeee;
+    box-sizing: border-box;
+    line-height: 40px;
+    font-size: 20px;
+}
+.project:nth-child(5n){
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+#insight-teams-display .member:nth-child(3n) {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#insight-teams-display .member:nth-child(3n + 1) {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+#insight-teams-display .member:nth-child(3n + 2) {
+    background-color: rgba(0, 0, 0, 0.05);
+}

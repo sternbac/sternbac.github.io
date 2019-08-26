@@ -8,7 +8,6 @@
 
     req.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            //console.log(this.responseText);
             const response = JSON.parse(this.responseText);
             const items = response["data"];
             const eventsContainer = document.getElementById("events-content");
@@ -101,7 +100,6 @@ function handleEmailSubmit(event){
     
     req.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText);
             clearInterval(animation);
             subscribeBtn.style.display = "none";
             thanksSub.style.display = "block";
