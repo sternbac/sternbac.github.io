@@ -149,7 +149,12 @@
 
 #events-content .content-block-header {
     background-color: #374C60;
-    font-weight: bold;
+    color:white;
+}
+
+#events-content .content-block {
+    width: 100%;
+    padding: 0 45px;
 }
 
 #events-content .content-block-body {
