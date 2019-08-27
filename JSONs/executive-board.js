@@ -18,7 +18,7 @@ var board = {
 			"name": "Nicole Ng",
 			"title": "VP of Insight Team",
 			"school": "Stern Class of 2020",
-			"degree": "B.S. Marketing and Global Business",
+			"degree": "B.S. Data Science and Statistics",
 			"img": "nicole.jpg"
 		},
 		{

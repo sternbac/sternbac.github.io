@@ -5,7 +5,7 @@ function get_month_name(monthNumber) {
 }
 
 (() => {
-    const api = "//bac-backend.herokuapp.com/calendar/3";
+    const api = "//bac-backend.herokuapp.com/calendar/0";
     const req = new XMLHttpRequest();
 
     let monthDict = {};
@@ -16,7 +16,7 @@ function get_month_name(monthNumber) {
             const items = response["data"];
             for(let i = 0; i < items.length; i++){
                 let entry = items[i];
-                if(activeMonths.includes(entry.month)){
+                if(activeMonths.includes(entry.month) && entry.title !== "Weekly BAC Meeting"){
                     let _monthContainer = document.getElementById(`${entry.month}`);
                     let eventString = `
                         <div class="content-block-container">
@@ -26,12 +26,23 @@ function get_month_name(monthNumber) {
                                     ${entry.title}
                                 </div>
                                 <div class="content-block-body">
-                                    ${entry.time}
-                                    <br>
-                                    ${entry.location}
-                                </div>
+                        `;
+
+                    if(entry.description !== undefined){
+                        eventString += `
+                            ${entry.description}
+                            <br>
+                            <br>
+                        `;
+                    }
+
+                    eventString += `
+                                ${entry.time}
+                                <br>
+                                ${entry.location}
                             </div>
-                        </div>`;
+                        </div>
+                    </div>`;
                     _monthContainer.insertAdjacentHTML('beforeend', eventString);
                 }
             }

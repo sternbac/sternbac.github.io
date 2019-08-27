@@ -77,3 +77,53 @@
 #insight-teams-display .member:nth-child(3n + 2) {
     background-color: rgba(0, 0, 0, 0.05);
 }
+
+.insight-teams-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.insight-team {
+    width: 80%;
+    margin: 20px auto 0 auto;
+}
+
+@media only screen and (min-width: 728px){
+    .insight-team {
+        width: 45%;
+    }
+}
+
+.insight-team-header {
+    font-size: 22px;
+    /* color: #374C60; */
+    color: black;
+    text-align: center;
+    background-color: #eeeeee;
+    padding: 0 20px;
+    font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #374C60;
+    /* border-left: 2px solid #374C60;
+    border-right: 2px solid #374C60; */
+    background-color: #1AB999;
+    padding: 20px;
+}
+
+.insight-team-by {
+    font-size: 18px;
+    margin-top: 30px;
+    display: block;
+}
+
+.insight-team-photo {
+    width: 100%;
+    /* border-top: 2px solid #1AB999; */
+    border-left: 2px solid #374C60;
+    border-right: 2px solid #374C60;
+    border-bottom: 2px solid #374C60;
+    box-sizing: border-box
+}

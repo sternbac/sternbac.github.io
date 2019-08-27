@@ -14,7 +14,8 @@
             loading.style.display = 'none';
             for(let i = 0; i < items.length; i++){
                 const item = items[i];
-                const itemString = `
+
+                let itemString = `
                     <div class="content-block-container">
                         <div class="overlay"></div>
                         <div class="content-block">
@@ -22,12 +23,23 @@
                                 ${item.title}
                             </div>
                             <div class="content-block-body">
-                                ${item.time}
-                                <br>
-                                ${item.location}
-                            </div>
+                    `;
+
+                if(item.description !== undefined){
+                    itemString += `
+                        ${item.description}
+                        <br>
+                        <br>
+                    `;
+                }
+
+                itemString += `
+                            ${item.time}
+                            <br>
+                            ${item.location}
                         </div>
-                    </div>`;
+                    </div>
+                </div>`;
                 eventsContainer.insertAdjacentHTML('beforeend', itemString);
             }
         }
