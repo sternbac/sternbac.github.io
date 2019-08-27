@@ -9,6 +9,10 @@
     min-height: 150px;
 }
 
+#calendar-content .content-block {
+    width: 90%;
+}
+
 .months { /* Needed for animation effects via JS */
     height: 0px;
     overflow: hidden;
@@ -45,3 +49,4 @@
 #space {
     height: calc(100% - 500px);
 }
+
