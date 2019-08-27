@@ -27,12 +27,16 @@
 .month {
     height: auto;
     border-top: 2px solid #1AB999;
-    padding-left: 30px;
     background-color: #eeeeee;
     box-sizing: border-box;
     line-height: 40px;
     font-size: 20px;
 }
+
+.month-header {
+    padding-left: 30px;
+}
+
 .month:nth-child(4n){
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;

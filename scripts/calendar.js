@@ -26,7 +26,6 @@ function get_month_name(monthNumber) {
                                     ${entry.title}
                                 </div>
                                 <div class="content-block-body">
-                                    <img src="icons/vip-pass.svg" class="content-icon">
                                     ${entry.time}
                                     <br>
                                     ${entry.location}
