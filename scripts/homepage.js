@@ -22,7 +22,6 @@
                                 ${item.title}
                             </div>
                             <div class="content-block-body">
-                                <img src="icons/vip-pass.svg" class="content-icon">
                                 ${item.time}
                                 <br>
                                 ${item.location}
