@@ -10,7 +10,11 @@
 }
 
 #calendar-content .content-block {
-    width: 90%;
+    width: 95%;
+}
+
+.content-block::after {
+    content: none;
 }
 
 .months { /* Needed for animation effects via JS */

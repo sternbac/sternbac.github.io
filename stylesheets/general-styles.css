@@ -408,6 +408,12 @@ html, body {
     max-width: 800px;
 }
 
+@media only screen and (max-width: 414px){
+    .semester {
+        width: 100%;
+    }
+}
+
 .semester-icon, .semester-text {
     display: inline-block;
     font-size: 25px;
