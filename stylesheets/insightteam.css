@@ -78,22 +78,11 @@
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-.insight-teams-display {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .insight-team {
     width: 80%;
     margin: 20px auto 0 auto;
-}
-
-@media only screen and (min-width: 728px){
-    .insight-team {
-        width: 45%;
-    }
+    display: block;
+    max-width: 600px;
 }
 
 .insight-team-header {

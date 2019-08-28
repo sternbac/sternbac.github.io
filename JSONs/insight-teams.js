@@ -18,6 +18,12 @@ var insightTeams =
                 "by": "Jacob Swe, Iva Porfirova, Lee Ding, Derek Huang",
                 "img": "NationalForest.png",
                 "href": "https://docs.google.com/presentation/d/1sDVVNPiVcpWpCPiruM1ma7NWyPbaMDpbauD_VwqPVJU/edit?usp=sharing"
+            },
+            {
+                "name" : "Airbnb Price Estimation in Major US Metropolitan Areas",
+                "by": "Riya Mokashi, Larry Langman, William Kim, Tej Chilukuri",
+                "img": "Airbnb.png",
+                "href": "https://docs.google.com/presentation/d/1k9WR8D6vNPt1M0PRIzzlf0p-JEtsc300Y7_Ziw4mdBM/edit?usp=sharing"
             }
             
         ]
