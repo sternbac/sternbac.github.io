@@ -147,6 +147,13 @@
     margin: auto;
 }
 
+@media only screen and (max-width: 728px){
+    #events-content {
+        padding: 15px 20px 30px 20px;
+    }
+    
+}
+
 #events-content .content-block-header {
     background-color: #374C60;
     color:white;
