@@ -6,7 +6,6 @@ function get_month_name(monthNumber) {
 
 (() => {
     const api = "//bac-backend.herokuapp.com/calendar/0";
-    // const api = "http://localhost:3000/calendar/0";
     const req = new XMLHttpRequest();
 
     let monthDict = {};
