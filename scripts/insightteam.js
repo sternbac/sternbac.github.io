@@ -3,14 +3,16 @@ const teamsContainer = document.querySelector("#insight-teams-display");
 for(let i = 0; i < teams.length; i++){
     const team = teams[i];
     const teamString = `
-        <div class="insight-team">
-            <div class="insight-team-header">
-                <span class="text">${team["name"]}<span>
-                <br>
-                <span class="text insight-team-by"> By: ${team["by"]} </span>
+        <a href="${team["href"]}" target="_blank">
+            <div class="insight-team">
+                <div class="insight-team-header">
+                    <span class="text">${team["name"]}<span>
+                    <br>
+                    <span class="text insight-team-by"> By: ${team["by"]} </span>
+                </div>
+                <img src="./images/insight/${team["img"]}" class="insight-team-photo">
             </div>
-            <img src="./images/insight/${team["img"]}" class="insight-team-photo">
-        </div>
+        </a>
         `;
 
     teamsContainer.insertAdjacentHTML('beforeend', teamString);
