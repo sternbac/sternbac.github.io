@@ -67,6 +67,7 @@ menu.addEventListener('click', () => {
 
 
 const body = document.getElementById('body');
+const wideNav = document.querySelector("#wide-navbar");
 const mobileLogoText = document.querySelector('#mobile-navbar #logo-text');
 const wideLogoText = document.querySelector('#wide-navbar #logo-text');
 const mobileCenterLogo = document.querySelector('#mobile-navbar #center-logo');
@@ -89,6 +90,7 @@ body.addEventListener('scroll', () => {
         wideCenterLogo.style.transform = "scale(1) translateY(20px)";
         navbarHeader.style.height = "75px";
         navbarHeader.style["border-bottom"] = "2px solid #374C60";
+        wideNav.style["padding-top"] = "10px";
 
     } else if(currScroll < threshold){
         mobileLogoText.style.display = "block";
@@ -97,6 +99,7 @@ body.addEventListener('scroll', () => {
         wideCenterLogo.style.transform = "scale(1.5) translateY(0px)";
         navbarHeader.style.height = "120px";
         navbarHeader.style["border-bottom"] = "2px solid transparent";
+        wideNav.style["padding-top"] = "20px";
     }
     fadeOnScroll();
 });

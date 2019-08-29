@@ -129,6 +129,8 @@ html, body {
     display: -webkit-box;
     -webkit-box-pack: justify;
     -webkit-box-align: center;
+    padding: 20px 40px 0 40px;
+    box-sizing: border-box;
 }
 
 .navbar-item-wide {
