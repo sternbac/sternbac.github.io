@@ -4,7 +4,7 @@
 }
 
 #about-content, #event-content {
-    padding: 15px 50px 30px 50px;
+    padding: 15px 50px 20px 50px;
     color: white;
     font-size: 18px;
 }
@@ -27,6 +27,7 @@ table {
     vertical-align: baseline;
     font-size: 20px;
     color: white;
+    text-align: center;
 }
 
 table td {
@@ -67,6 +68,7 @@ table tbody tr {
     line-height: 35px;
     font-size: 20px;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 #membership-input::placeholder {
