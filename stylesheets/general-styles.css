@@ -227,12 +227,12 @@ html, body {
 }
 
 .overlay {
-    height: 100%;
+    height: calc(100% + 10px);
     width: 10%;
     position: absolute;
     display: block;
     background-color: inherit;
-    z-index: 10;
+    z-index: 11;
 }
 
 .content-block {
