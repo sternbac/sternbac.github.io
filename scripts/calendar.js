@@ -9,7 +9,7 @@ function get_month_name(monthNumber) {
     const req = new XMLHttpRequest();
 
     let monthDict = {};
-    
+
     req.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             const response = JSON.parse(this.responseText);
@@ -20,7 +20,6 @@ function get_month_name(monthNumber) {
                     let _monthContainer = document.getElementById(`${entry.month}`);
                     let eventString = `
                         <div class="content-block-container">
-                            <div class="overlay"></div>
                             <div class="content-block">
                                 <div class="content-block-header">
                                     ${entry.title}
