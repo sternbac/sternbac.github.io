@@ -283,6 +283,10 @@ html, body {
     line-height: 30px;
 }
 
+.content-block-link {
+    color: #0074D9 !important;
+}
+
 .content-icon {
     width:30px;
     height:30px;
