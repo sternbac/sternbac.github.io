@@ -1,4 +1,4 @@
-var insightProjects = 
+var insightProjects =
     {
         "data": [
             {
@@ -28,8 +28,8 @@ var insightProjects =
                 ]
             },
             {
-                "id": "s18",
-                "semester": "Spring 2018",
+                "id": "f18",
+                "semester": "Fall 2018",
                 "projects": [
                     {
                         text: "Coffee Reviews",
