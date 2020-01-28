@@ -130,13 +130,6 @@ var board = {
 			"degree": "B.S. Finance & Data Science",
 			"img": "neila.jpg"
 		},
-		{
-			"name": "Caroline Son",
-			"title": "Co-VP of TechTalks",
-			"school": "Stern Class of 2023",
-			"degree": "B.S. Computing and Data Science & Finance and Computer Science",
-			"img": "caroline.jpg"
-		},
         {
 			"name": "Sanjana Behare",
 			"title": "Co-VP of TechTalks",
