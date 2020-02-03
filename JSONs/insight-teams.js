@@ -1,30 +1,30 @@
-var insightTeams = 
+var insightTeams =
     {
-        "teams": [
+        teams: [
             {
-                "name" : "A Comparative Analysis Of Machine Learning Models For Intelligent Prosthetics",
-                "by": "Jacob Swe, Eeshaan Rao, Shrina Parikh, Kunj Padh",
-                "img": "IntelligentProsthetics.png",
-                "href": "https://docs.google.com/presentation/d/1a2Xu5jZG6S62ISTt-VtTLcRRETqPTzO4uEaAGMOxV5s/edit?usp=sharing"
+                name: "Predicting the Obsolescence of US Generators",
+                by: "Poorav Desai, Manuela Rodriguez, Jason Liu, Prayush Kundu",
+                img: "Predicting.png",
+                href: "https://drive.google.com/file/d/1YraTSxH2p_POwZWYa74o96MzU69Dn94b/view?usp=sharing"
             },
             {
-                "name" : "NYC Housing Price Prediction",
-                "by": "Alex Rudra, Kathleen Zhang, Pratyush Kundu, Nicole Ng",
-                "img": "NYCHousePricePrediction.png",
-                "href": "https://docs.google.com/presentation/d/1U0wzXAOwaKr9_w5eB5h4K2ac-CHnNS6xzS7bEQHwxEo/edit?usp=sharing"
+                name: "Crunch",
+                by: "Riya Mokashi, Eric Zhao, Iva Porfirova, Ken Yokokawa",
+                img: "Crunch.png",
+                href: "https://docs.google.com/presentation/d/1jUC8r7wKxMMGd7p0iwSeCSJfl0-klIrZqYHdrFeowz0/edit?usp=sharing"
             },
             {
-                "name" : "An Investigation and Predictive Analysis of Tree Cover Types in Roosevelt National Forest",
-                "by": "Jacob Swe, Iva Porfirova, Lee Ding, Derek Huang",
-                "img": "NationalForest.png",
-                "href": "https://docs.google.com/presentation/d/1sDVVNPiVcpWpCPiruM1ma7NWyPbaMDpbauD_VwqPVJU/edit?usp=sharing"
+                name: "Classifying Spotify Songs by Danceability",
+                by: "Katharina Eibel, Derek Huang, Alex Rudra, Jack Wang",
+                img: "Classifying.png",
+                href: "https://drive.google.com/open?id=1mGQuyMRerEk6zi2CaVTgZxcSrlHUO3gt3ZfC0X4Khwg"
             },
             {
-                "name" : "Airbnb Price Estimation in Major US Metropolitan Areas",
-                "by": "Riya Mokashi, Larry Langman, William Kim, Tej Chilukuri",
-                "img": "Airbnb.png",
-                "href": "https://docs.google.com/presentation/d/1k9WR8D6vNPt1M0PRIzzlf0p-JEtsc300Y7_Ziw4mdBM/edit?usp=sharing"
+                name: "Credit Card Defaults",
+                by: "Eeshaan Rao, Janet Huang, Vanessa Ting, Matthew Zhang",
+                img: "Credit.png",
+                href: "https://drive.google.com/open?id=14vQZmh_N6a9zY9TLTvnZEJf-RjyI4qSH"
             }
-            
+
         ]
     };
