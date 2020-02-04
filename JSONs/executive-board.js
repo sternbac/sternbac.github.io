@@ -64,16 +64,9 @@ var board = {
 			"img": "adwyn.jpg"
 		},
 		{
-			"name": "Zach Asato",
-			"title": "Co-VP of Marketing",
-			"school": "Stern Class of 2020",
-			"degree": "B.S. Marketing & Finance",
-			"img": "zach.jpg"
-		},
-		{
 			"name": "Nihar Shah",
 			"title": "Treasurer",
-			"school": "Stern Class of 2020",
+			"school": "Stern Class of 2021",
 			"degree": "B.S. Marketing & Data Science",
 			"img": "nihar.jpg"
 		},
