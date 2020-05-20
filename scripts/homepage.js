@@ -53,9 +53,15 @@
     const membersContainer = document.querySelector("#board-container > .members");
     for(let i = 0; i < members.length; i++){
         const member = members[i];
+        
+        let imgStr = ""
+        if (member.img != ""){
+            imgStr =  `<img class="member-img" src="images/board/${member.img}">`
+        }
+        
         const memberString = `
             <div class="member">
-            <img class="member-img" src="images/board/${member.img}">
+            ${imgStr}
             <div class="member-content">
                 <div class="member-info">
                     <div class="member-name">
@@ -72,6 +78,7 @@
             </div>
         </div>
         `;
+
         membersContainer.insertAdjacentHTML('beforeend', memberString);
     }
     
