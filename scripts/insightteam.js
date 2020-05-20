@@ -5,7 +5,7 @@ for(let i = 0; i < teams.length; i++){
     const teamString = `
         <a href="${team["href"]}" target="_blank" class="insight-team">
             <div class="insight-team-header">
-                <span class="text">${team["name"]}<span>
+                <span class="text white">${team["name"]}<span>
                 <br>
                 <span class="text insight-team-by"> By: ${team["by"]} </span>
             </div>
@@ -14,6 +14,24 @@ for(let i = 0; i < teams.length; i++){
     `;
 
     teamsContainer.insertAdjacentHTML('beforeend', teamString);
+}
+
+const advTeams = insightTeams["advanced"];
+const advContainer = document.querySelector("#insight-advanced-teams-display");
+
+for(let i = 0; i < advTeams.length; i++){
+    const advTeam = advTeams[i];
+    const advString = `
+        <a href="${advTeam["href"]}" target="_blank" class="insight-team">
+            <div class="insight-team-header">
+                <span class="text white">${advTeam["name"]}<span>
+                <br>
+                <span class="text insight-team-by"> By: ${advTeam["by"]} </span>
+            </div>
+            <img src="./images/insight/${advTeam["img"]}" class="insight-team-photo">
+        </a>
+    `;
+    advContainer.insertAdjacentHTML('beforeend', advString);
 }
 
 const projectsContainer = document.querySelector("#past-projects-content");

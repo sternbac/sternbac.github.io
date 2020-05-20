@@ -66,6 +66,28 @@ var insightProjects =
                         href: "https://docs.google.com/presentation/d/1k9WR8D6vNPt1M0PRIzzlf0p-JEtsc300Y7_Ziw4mdBM/edit?usp=sharing"
                     }
                 ]
+            },
+            {
+                "id": "f19",
+                "semester": "Fall 2019",
+                "projects": [
+                    {
+                        text : "Predicting the Obsolescence of US Generators",
+                        href: "https://drive.google.com/open?id=18u1Wu55jiINu1hcNkCRkZIGZvbbWnkkQ"
+                    },
+                    {
+                        text : "Crunch",
+                        href: "https://drive.google.com/open?id=15GSMjxhCZHZK3wfhmMH033e5VdGysL1n"
+                    },
+                    {
+                        text : "Classifying Spotify Songs by Danceability",
+                        href: "https://drive.google.com/file/d/1muMoXdSj4ad6beQm2dIoFM3_F-XfcdFJ/view?usp=sharing"
+                    },
+                    {
+                        text : "Credit Card Defaults",
+                        href: "https://drive.google.com/open?id=14vQZmh_N6a9zY9TLTvnZEJf-RjyI4qSH"
+                    }
+                ]
             }
         ]
     };
