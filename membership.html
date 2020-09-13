@@ -1,233 +1,266 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	    <meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	    <title>BAC - Membership</title>
-		<link rel="stylesheet" type="text/css" href="stylesheets/bac-logo.css?v=11">
-        <link rel="stylesheet" type="text/css" href="stylesheets/general-styles.css?v=14">
-        <link rel="stylesheet" type="text/css" href="stylesheets/membership.css?v=12">
-        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-        <script src="https://kit.fontawesome.com/65e5c6d42f.js"></script>
-        <!-- Include the polyfill -->
-        <script src="scripts/web-animations-js-2.3.1/web-animations.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BAC - Membership</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="stylesheets/bac-logo.css?v=11"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="stylesheets/general-styles.css?v=14"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="stylesheets/membership.css?v=12"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <script src="https://kit.fontawesome.com/65e5c6d42f.js"></script>
+    <!-- Include the polyfill -->
+    <script src="scripts/web-animations-js-2.3.1/web-animations.min.js"></script>
   </head>
   <body>
     <div id="navbar">
-        <div id="navbar-header">
-            <div id="mobile-navbar">
-                <div id="logo-container">
-                    <a id="center-logo" class="container fs-4" href="./index.html">
-                        <div class="B">
-                            <div class="b-top">
-                                <div class="b-rect"></div>
-                                <div class="b-circle"></div>
-                            </div>
-                            <div class="line"></div>
-                            <div class="b-lower">
-                                <div class="b-rect"></div>
-                                <div class="b-circle"></div>
-                            </div>
-                        </div>
-
-                        <div class="A">
-                            <div class="a-left-line"></div>
-                            <div class="line"></div>
-                            <div class="a-right-line"></div>
-                        </div>
-
-                        <div class="C">
-                            <div class="C-inner"></div>
-                            <div class="C-whitespace"></div>
-                            <div class="line"></div>
-                        </div>
-                    </a>
-
-                    <div id="logo-text">
-                        <span class="charcoal"> BUSINESS </span>
-                        <span class="green"> ANALYTICS </span>
-                        <span class="charcoal"> CLUB </span>
-                    </div>
+      <div id="navbar-header">
+        <div id="mobile-navbar">
+          <div id="logo-container">
+            <a id="center-logo" class="container fs-4" href="./index.html">
+              <div class="B">
+                <div class="b-top">
+                  <div class="b-rect"></div>
+                  <div class="b-circle"></div>
                 </div>
-
-
-                <div id="hamburger-menu">
-                    <div class="h-line"></div>
-                    <div class="h-line"></div>
-                    <div class="h-line"></div>
+                <div class="line"></div>
+                <div class="b-lower">
+                  <div class="b-rect"></div>
+                  <div class="b-circle"></div>
                 </div>
+              </div>
+
+              <div class="A">
+                <div class="a-left-line"></div>
+                <div class="line"></div>
+                <div class="a-right-line"></div>
+              </div>
+
+              <div class="C">
+                <div class="C-inner"></div>
+                <div class="C-whitespace"></div>
+                <div class="line"></div>
+              </div>
+            </a>
+
+            <div id="logo-text">
+              <span class="charcoal"> BUSINESS </span>
+              <span class="green"> ANALYTICS </span>
+              <span class="charcoal"> CLUB </span>
             </div>
+          </div>
 
-            <div id="wide-navbar">
-                <a class="navbar-item-wide" href="./calendar.html" id="calendar-tab">
-                    Calendar
-                </a>
-                <a class="navbar-item-wide" href="./insightteam.html" id="insight-team-tab">
-                    Insight Team
-                </a>
-                <div id="logo-container">
-                    <!-- CENTER LOGO -->
-                    <a id="center-logo" class="container fs-4" href="./index.html">
-                        <div class="B">
-                            <div class="b-top">
-                                <div class="b-rect"></div>
-                                <div class="b-circle"></div>
-                            </div>
-                            <div class="line"></div>
-                            <div class="b-lower">
-                                <div class="b-rect"></div>
-                                <div class="b-circle"></div>
-                            </div>
-                        </div>
-
-                        <div class="A">
-                            <div class="a-left-line"></div>
-                            <div class="line"></div>
-                            <div class="a-right-line"></div>
-                        </div>
-
-                        <div class="C">
-                            <div class="C-inner"></div>
-                            <div class="C-whitespace"></div>
-                            <div class="line"></div>
-                        </div>
-                    </a>
-
-                    <div id="logo-text">
-                        <span class="charcoal"> BUSINESS </span>
-                        <span class="green"> ANALYTICS </span>
-                        <span class="charcoal"> CLUB </span>
-                    </div>
-                </div>
-                <a class="navbar-item-wide" href="./membership.html" id="membership-tab">
-                    Membership
-                </a>
-                <a class="navbar-item-wide" href="./bacsquared.html" id="bac-squared-tab">
-                    BAC<sup>2</sup>
-                </a>
-            </div>
-
+          <div id="hamburger-menu">
+            <div class="h-line"></div>
+            <div class="h-line"></div>
+            <div class="h-line"></div>
+          </div>
         </div>
 
-        <div id="nav-items">
-            <a class="navbar-item" href="./index.html" id="home-tab">Home</a>
-            <a class="navbar-item" href="./calendar.html" id="calendar-tab">Calendar</a>
-            <a class="navbar-item" href="./insightteam.html" id="insight-team-tab">Insight Team</a>
-            <a class="navbar-item" href="./membership.html" id="membership-tab">Membership</a>
-            <a class="navbar-item" href="./bacsquared.html" id="bac-squared-tab">BAC<sup>2</sup> Conference</a>
+        <div id="wide-navbar">
+          <a class="navbar-item-wide" href="./calendar.html" id="calendar-tab">
+            Calendar
+          </a>
+          <a
+            class="navbar-item-wide"
+            href="./insightteam.html"
+            id="insight-team-tab"
+          >
+            Insight Team
+          </a>
+          <div id="logo-container">
+            <!-- CENTER LOGO -->
+            <a id="center-logo" class="container fs-4" href="./index.html">
+              <div class="B">
+                <div class="b-top">
+                  <div class="b-rect"></div>
+                  <div class="b-circle"></div>
+                </div>
+                <div class="line"></div>
+                <div class="b-lower">
+                  <div class="b-rect"></div>
+                  <div class="b-circle"></div>
+                </div>
+              </div>
+
+              <div class="A">
+                <div class="a-left-line"></div>
+                <div class="line"></div>
+                <div class="a-right-line"></div>
+              </div>
+
+              <div class="C">
+                <div class="C-inner"></div>
+                <div class="C-whitespace"></div>
+                <div class="line"></div>
+              </div>
+            </a>
+
+            <div id="logo-text">
+              <span class="charcoal"> BUSINESS </span>
+              <span class="green"> ANALYTICS </span>
+              <span class="charcoal"> CLUB </span>
+            </div>
+          </div>
+          <a
+            class="navbar-item-wide"
+            href="./membership.html"
+            id="membership-tab"
+          >
+            Membership
+          </a>
+          <a
+            class="navbar-item-wide"
+            href="./bacsquared.html"
+            id="bac-squared-tab"
+          >
+            BAC<sup>2</sup>
+          </a>
         </div>
+      </div>
+
+      <div id="nav-items">
+        <a class="navbar-item" href="./index.html" id="home-tab">Home</a>
+        <a class="navbar-item" href="./calendar.html" id="calendar-tab"
+          >Calendar</a
+        >
+        <a class="navbar-item" href="./insightteam.html" id="insight-team-tab"
+          >Insight Team</a
+        >
+        <a class="navbar-item" href="./membership.html" id="membership-tab"
+          >Membership</a
+        >
+        <a class="navbar-item" href="./bacsquared.html" id="bac-squared-tab"
+          >BAC<sup>2</sup> Conference</a
+        >
+      </div>
     </div>
 
-		<div id="body">
+    <div id="body">
+      <div class="content-block-container">
+        <div class="overlay"></div>
+        <div class="content-block">
+          <div class="content-block-header">
+            <span class="text">Membership</span>
+          </div>
+          <div class="content-block-body">
+            <img src="icons/member-card.svg" class="content-icon" />
+            <span class="text">Monitor Your Membership Status Here!</span>
+          </div>
+        </div>
+      </div>
 
-            <div class="content-block-container">
-                <div class="overlay"></div>
-                <div class="content-block">
-                    <div class="content-block-header">
-                        <span class="text">Membership</span>
-                    </div>
-                    <div class="content-block-body">
-                        <img src="icons/member-card.svg" class="content-icon">
-                        <span class="text">Monitor Your Membership Status Here!</span>
-                    </div>
-                </div>
-            </div>
+      <div id="about">
+        <div class="main-header">
+          <span class="text">About BAC's Membership Tier System </span>
+        </div>
+        <div class="main-underline-container">
+          <div class="main-header-underline"></div>
+        </div>
+        <div id="about-content">
+          <span class="text">
+            This program tracks the attendance of BAC members and provides
+            benefits to those most engaged with the club. The two types of BAC
+            Members are <b>General Members</b> -
+            <i>Students who have attended at least one BAC weekly meeting</i>
+            and <b>Prime Members</b> -
+            <i
+              >Students who have attended 5 meetings by the first cut-off date
+              and 7 meetings by the second cut-off dates</i
+            >. Maintain your Prime status by continuing to attended BAC weekly
+            meetings, making sure you attend at least half by each cutoff date.
+          </span>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <span class="text">
+                    <strong>First Cut-Off Date</strong>
+                  </span>
+                </td>
+                <td>
+                  <span class="text">
+                    <strong>Second Cut-Off Date</strong>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="text"> October 21st, 2020 </span>
+                </td>
+                <td>
+                  <span class="text"> TBD </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-            <div id="about">
-                <div class="main-header">
-                    <span class="text">About BAC's Membership Tier System </span>
-                </div>
-                <div class="main-underline-container">
-                    <div class="main-header-underline"></div>
-                </div>
-                <div id="about-content">
-                    <span class="text">
-                        This program tracks the attendance of BAC members and provides benefits to
-                        those most engaged with the club. The two types of BAC Members are <b>General
-                        Members</b> - <i>Students who have attended at least one BAC weekly meeting</i> and
-                        <b>Prime Members</b> - <i>Students who have attended 5 meetings by the first cut-off
-                        date and 7 meetings by the second cut-off dates</i>. Maintain your Prime status
-                        by continuing to attended BAC weekly meetings, making sure you attend at
-                        least half by each cutoff date.
-                    </span>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <span class="text">
-                                        <strong>First Cut-Off Date</strong>
-                                    </span>
-                                </td>
-                                <td>
-                                    <span class="text">
-                                        <strong>Second Cut-Off Date</strong>
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="text">
-                                        October 16th, 2019
-                                    </span>
-                                </td>
-                                <td>
-                                    <span class="text">
-                                        December 11th, 2019
-                                    </span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-
-
-            <form id="membership-container" onsubmit="handleMembershipSubmit(event)">
-                <div class="sub-header">
-                    <span class="text">Events Attended </span>
-                </div>
-                <div class="sub-underline-container">
-                    <div class="sub-header-underline"></div>
-                </div>
-
-                <div id="event-content">
-                    <span class="text">Enter your NetId below to see how many events you've attended.</span>
-                </div>
-
-                <input placeholder="Enter Your NetID Here..." id="membership-input">
-                <div id="submit-btn">
-                    <span>Submit</span>
-                </div>
-                <div id="reply-status">
-                    <span id="attendance-msg" class="text">You have not attended any BAC meetings.</span>
-                    <br>
-                    <span id="additional-info" class="text"></span>
-                </div>
-            </form>
-
-            <div id="footer">
-                <div id="footer-content">
-                    <div id="footer-links">
-                        <a href="https://facebook.com/SternBAC/" class="footer-link" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="mailto:analytic@stern.nyu.edu" class="footer-link">
-                            <i class="far fa-envelope"></i>
-                        </a>
-                    </div>
-
-                    <div id="copyright">
-                        <span class="text">&copy; Business Analytics Club</span>
-                    </div>
-                </div>
-
-            </div>
-
+      <form id="membership-container" onsubmit="handleMembershipSubmit(event)">
+        <div class="sub-header">
+          <span class="text">Events Attended </span>
+        </div>
+        <div class="sub-underline-container">
+          <div class="sub-header-underline"></div>
         </div>
 
-        <script src="scripts/membership.js?v=11"></script>
-        <script src="scripts/general-scripts.js?v=12"></script>
+        <div id="event-content">
+          <span class="text"
+            >Enter your NetId below to see how many events you've
+            attended.</span
+          >
+        </div>
+
+        <input placeholder="Enter Your NetID Here..." id="membership-input" />
+        <div id="submit-btn">
+          <span>Submit</span>
+        </div>
+        <div id="reply-status">
+          <span id="attendance-msg" class="text"
+            >You have not attended any BAC meetings.</span
+          >
+          <br />
+          <span id="additional-info" class="text"></span>
+        </div>
+      </form>
+
+      <div id="footer">
+        <div id="footer-content">
+          <div id="footer-links">
+            <a
+              href="https://facebook.com/SternBAC/"
+              class="footer-link"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="mailto:analytic@stern.nyu.edu" class="footer-link">
+              <i class="far fa-envelope"></i>
+            </a>
+          </div>
+
+          <div id="copyright">
+            <span class="text">&copy; Business Analytics Club</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/membership.js?v=11"></script>
+    <script src="scripts/general-scripts.js?v=12"></script>
   </body>
 </html>
