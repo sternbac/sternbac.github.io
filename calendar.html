@@ -1,221 +1,251 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	    <meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	    <title>BAC - Calendar</title>
-		<link rel="stylesheet" type="text/css" href="stylesheets/bac-logo.css?v=11">
-        <link rel="stylesheet" type="text/css" href="stylesheets/general-styles.css?v=14">
-        <link rel="stylesheet" type="text/css" href="stylesheets/calendar.css?v=11">
-        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-        <script src="https://kit.fontawesome.com/65e5c6d42f.js"></script>
-        <!-- Include the polyfill -->
-        <script src="scripts/web-animations-js-2.3.1/web-animations.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BAC - Calendar</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="stylesheets/bac-logo.css?v=11"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="stylesheets/general-styles.css?v=14"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="stylesheets/calendar.css?v=11"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <script src="https://kit.fontawesome.com/65e5c6d42f.js"></script>
+    <!-- Include the polyfill -->
+    <script src="scripts/web-animations-js-2.3.1/web-animations.min.js"></script>
   </head>
   <body>
     <div id="navbar">
-        <div id="navbar-header">
-            <div id="mobile-navbar">
-                <div id="logo-container">
-                    <a id="center-logo" class="container fs-4" href="./index.html">
-                        <div class="B">
-                            <div class="b-top">
-                                <div class="b-rect"></div>
-                                <div class="b-circle"></div>
-                            </div>
-                            <div class="line"></div>
-                            <div class="b-lower">
-                                <div class="b-rect"></div>
-                                <div class="b-circle"></div>
-                            </div>
-                        </div>
-
-                        <div class="A">
-                            <div class="a-left-line"></div>
-                            <div class="line"></div>
-                            <div class="a-right-line"></div>
-                        </div>
-
-                        <div class="C">
-                            <div class="C-inner"></div>
-                            <div class="C-whitespace"></div>
-                            <div class="line"></div>
-                        </div>
-                    </a>
-
-                    <div id="logo-text">
-                        <span class="charcoal"> BUSINESS </span>
-                        <span class="green"> ANALYTICS </span>
-                        <span class="charcoal"> CLUB </span>
-                    </div>
+      <div id="navbar-header">
+        <div id="mobile-navbar">
+          <div id="logo-container">
+            <a id="center-logo" class="container fs-4" href="./index.html">
+              <div class="B">
+                <div class="b-top">
+                  <div class="b-rect"></div>
+                  <div class="b-circle"></div>
                 </div>
-
-
-                <div id="hamburger-menu">
-                    <div class="h-line"></div>
-                    <div class="h-line"></div>
-                    <div class="h-line"></div>
+                <div class="line"></div>
+                <div class="b-lower">
+                  <div class="b-rect"></div>
+                  <div class="b-circle"></div>
                 </div>
+              </div>
+
+              <div class="A">
+                <div class="a-left-line"></div>
+                <div class="line"></div>
+                <div class="a-right-line"></div>
+              </div>
+
+              <div class="C">
+                <div class="C-inner"></div>
+                <div class="C-whitespace"></div>
+                <div class="line"></div>
+              </div>
+            </a>
+
+            <div id="logo-text">
+              <span class="charcoal"> BUSINESS </span>
+              <span class="green"> ANALYTICS </span>
+              <span class="charcoal"> CLUB </span>
             </div>
+          </div>
 
-            <div id="wide-navbar">
-                <a class="navbar-item-wide" href="./calendar.html" id="calendar-tab">
-                    Calendar
-                </a>
-                <a class="navbar-item-wide" href="./insightteam.html" id="insight-team-tab">
-                    Insight Team
-                </a>
-                <div id="logo-container">
-                    <!-- CENTER LOGO -->
-                    <a id="center-logo" class="container fs-4" href="./index.html">
-                        <div class="B">
-                            <div class="b-top">
-                                <div class="b-rect"></div>
-                                <div class="b-circle"></div>
-                            </div>
-                            <div class="line"></div>
-                            <div class="b-lower">
-                                <div class="b-rect"></div>
-                                <div class="b-circle"></div>
-                            </div>
-                        </div>
-
-                        <div class="A">
-                            <div class="a-left-line"></div>
-                            <div class="line"></div>
-                            <div class="a-right-line"></div>
-                        </div>
-
-                        <div class="C">
-                            <div class="C-inner"></div>
-                            <div class="C-whitespace"></div>
-                            <div class="line"></div>
-                        </div>
-                    </a>
-
-                    <div id="logo-text">
-                        <span class="charcoal"> BUSINESS </span>
-                        <span class="green"> ANALYTICS </span>
-                        <span class="charcoal"> CLUB </span>
-                    </div>
-                </div>
-                <a class="navbar-item-wide" href="./membership.html" id="membership-tab">
-                    Membership
-                </a>
-                <a class="navbar-item-wide" href="./bacsquared.html" id="bac-squared-tab">
-                    BAC<sup>2</sup>
-                </a>
-            </div>
-
+          <div id="hamburger-menu">
+            <div class="h-line"></div>
+            <div class="h-line"></div>
+            <div class="h-line"></div>
+          </div>
         </div>
 
-        <div id="nav-items">
-            <a class="navbar-item" href="./index.html" id="home-tab">Home</a>
-            <a class="navbar-item" href="./calendar.html" id="calendar-tab">Calendar</a>
-            <a class="navbar-item" href="./insightteam.html" id="insight-team-tab">Insight Team</a>
-            <a class="navbar-item" href="./membership.html" id="membership-tab">Membership</a>
-            <a class="navbar-item" href="./bacsquared.html" id="bac-squared-tab">BAC<sup>2</sup> Conference</a>
+        <div id="wide-navbar">
+          <a class="navbar-item-wide" href="./calendar.html" id="calendar-tab">
+            Calendar
+          </a>
+          <a
+            class="navbar-item-wide"
+            href="./insightteam.html"
+            id="insight-team-tab"
+          >
+            Insight Team
+          </a>
+          <div id="logo-container">
+            <!-- CENTER LOGO -->
+            <a id="center-logo" class="container fs-4" href="./index.html">
+              <div class="B">
+                <div class="b-top">
+                  <div class="b-rect"></div>
+                  <div class="b-circle"></div>
+                </div>
+                <div class="line"></div>
+                <div class="b-lower">
+                  <div class="b-rect"></div>
+                  <div class="b-circle"></div>
+                </div>
+              </div>
+
+              <div class="A">
+                <div class="a-left-line"></div>
+                <div class="line"></div>
+                <div class="a-right-line"></div>
+              </div>
+
+              <div class="C">
+                <div class="C-inner"></div>
+                <div class="C-whitespace"></div>
+                <div class="line"></div>
+              </div>
+            </a>
+
+            <div id="logo-text">
+              <span class="charcoal"> BUSINESS </span>
+              <span class="green"> ANALYTICS </span>
+              <span class="charcoal"> CLUB </span>
+            </div>
+          </div>
+          <a
+            class="navbar-item-wide"
+            href="./membership.html"
+            id="membership-tab"
+          >
+            Membership
+          </a>
+          <a
+            class="navbar-item-wide"
+            href="./bacsquared.html"
+            id="bac-squared-tab"
+          >
+            BAC<sup>2</sup>
+          </a>
         </div>
+      </div>
+
+      <div id="nav-items">
+        <a class="navbar-item" href="./index.html" id="home-tab">Home</a>
+        <a class="navbar-item" href="./calendar.html" id="calendar-tab"
+          >Calendar</a
+        >
+        <a class="navbar-item" href="./insightteam.html" id="insight-team-tab"
+          >Insight Team</a
+        >
+        <a class="navbar-item" href="./membership.html" id="membership-tab"
+          >Membership</a
+        >
+        <a class="navbar-item" href="./bacsquared.html" id="bac-squared-tab"
+          >BAC<sup>2</sup> Conference</a
+        >
+      </div>
     </div>
 
-		<div id="body">
+    <div id="body">
+      <div class="content-block-container">
+        <div class="overlay"></div>
+        <div class="content-block">
+          <div class="content-block-header">All Events</div>
+          <div class="content-block-body">
+            <img src="icons/weekly-calendar.svg" class="content-icon" />
+            <span class="text">
+              Check out all of our events – past, present, and future!
+            </span>
+          </div>
+        </div>
+      </div>
 
-            <div class="content-block-container">
-                <div class="overlay"></div>
-                <div class="content-block">
-                    <div class="content-block-header">
-                        Upcoming Events
-                    </div>
-                    <div class="content-block-body">
-                        <img src="icons/weekly-calendar.svg" class="content-icon">
-                        <span class="text">
-                            Check out what we have planned!
-                        </span>
-                    </div>
-                </div>
+      <div id="calendar">
+        <div class="main-header">
+          <span class="text">Navigate By Semester</span>
+        </div>
+        <div class="main-underline-container">
+          <div class="main-header-underline"></div>
+        </div>
+
+        <div id="calendar-content">
+          <div class="semester" id="fall">
+            <div class="semester-header" data-sem="fall">
+              <div class="semester-icon">+</div>
+              <div class="semester-text">
+                <span class="text">Fall 2020</span>
+              </div>
             </div>
 
-            <div id="calendar">
-                <div class="main-header">
-                    <span class="text">Navigate By Semester</span>
-                </div>
-                <div class="main-underline-container">
-                    <div class="main-header-underline"></div>
-                </div>
+            <div class="months">
+              <div class="month" id="September">
+                <div class="month-header">September</div>
+              </div>
+              <div class="month" id="October">
+                <div class="month-header">October</div>
+              </div>
+              <div class="month" id="November">
+                <div class="month-header">November</div>
+              </div>
+              <div class="month" id="December">
+                <div class="month-header">December</div>
+              </div>
+            </div>
+          </div>
 
-                <div id="calendar-content">
-                    <div class="semester" id="fall">
-                        <div class="semester-header" data-sem="fall">
-                            <div class="semester-icon"> + </div>
-                            <div class="semester-text">
-                                <span class="text">Fall 2019</span>
-                            </div>
-                        </div>
-
-                        <div class="months">
-                            <div class="month" id="September">
-                                <div class="month-header"> September</div>
-                            </div>
-                            <div class="month" id="October">
-                                <div class="month-header"> October</div>
-                            </div>
-                            <div class="month" id="November">
-                                <div class="month-header"> November</div>
-                            </div>
-                            <div class="month" id="December">
-                                <div class="month-header"> December</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="semester" id="spring">
-                        <div class="semester-header" data-sem="spring">
-                            <div class="semester-icon"> + </div>
-                            <div class="semester-text">
-                                <span class="text">Spring 2019</span>
-                            </div>
-                        </div>
-
-                        <div class="months">
-                            <div class="month" id="February">
-                                <div class="month-header"> February</div>
-                            </div>
-                            <div class="month" id="March">
-                                <div class="month-header"> March</div>
-                            </div>
-                            <div class="month" id="April">
-                                <div class="month-header"> April</div>
-                            </div>
-                            <div class="month" id="May">
-                                <div class="month-header"> May</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="semester" id="spring">
+            <div class="semester-header" data-sem="spring">
+              <div class="semester-icon">+</div>
+              <div class="semester-text">
+                <span class="text">Spring 2020</span>
+              </div>
             </div>
 
-            <div id="space"></div>
+            <div class="months">
+              <div class="month" id="February">
+                <div class="month-header">February</div>
+              </div>
+              <div class="month" id="March">
+                <div class="month-header">March</div>
+              </div>
+              <div class="month" id="April">
+                <div class="month-header">April</div>
+              </div>
+              <div class="month" id="May">
+                <div class="month-header">May</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-			<div id="footer">
-				<div id="footer-content">
-					<div id="footer-links">
-						<a href="https://facebook.com/SternBAC/" class="footer-link" target="_blank">
-							<i class="fab fa-facebook-f"></i>
-						</a>
-						<a href="mailto:analytic@stern.nyu.edu" class="footer-link">
-							<i class="far fa-envelope"></i>
-						</a>
-					</div>
+      <div id="space"></div>
 
-					<div id="copyright">
-                        <span class="text">&copy; Business Analytics Club</span>
-					</div>
-				</div>
-			</div>
+      <div id="footer">
+        <div id="footer-content">
+          <div id="footer-links">
+            <a
+              href="https://facebook.com/SternBAC/"
+              class="footer-link"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="mailto:analytic@stern.nyu.edu" class="footer-link">
+              <i class="far fa-envelope"></i>
+            </a>
+          </div>
 
-		</div>
-        <script src="scripts/calendar.js?v=12"></script>
-        <script src="scripts/general-scripts.js?v=12"></script>
+          <div id="copyright">
+            <span class="text">&copy; Business Analytics Club</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/calendar.js?v=12"></script>
+    <script src="scripts/general-scripts.js?v=12"></script>
   </body>
 </html>

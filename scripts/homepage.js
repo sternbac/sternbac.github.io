@@ -10,35 +10,62 @@
       const items = response["data"];
       const eventsContainer = document.getElementById("events-content");
       loading.style.display = "none";
-      for (let i = 0; i < items.length; i++) {
-        const item = items[i];
+      if (items.length === 0) {
+        noEventString = `
+    
+                <div class="center-text">
+                Check back later!
+                </div>
+                
+        `;
+        eventsContainer.insertAdjacentHTML("beforeend", noEventString);
+      } else {
+        for (let i = 0; i < items.length; i++) {
+          const item = items[i];
+          let isLink = false;
+          const location = item.location.slice(10);
+          if (location.includes("http")) {
+            isLink = true;
+          }
 
-        let itemString = `
-                    <div class="content-block-container">
-                        <div class="overlay"></div>
-                        <div class="content-block">
-                            <div class="content-block-header">
-                                ${item.title}
-                            </div>
-                            <div class="content-block-body">
-                    `;
+          let itemString = `
+                      <div class="content-block-container">
+                          <div class="overlay"></div>
+                          <div class="content-block">
+                              <div class="content-block-header">
+                                  ${item.title}
+                              </div>
+                              <div class="content-block-body">
+                      `;
 
-        if (item.description !== undefined) {
+          if (item.description !== undefined) {
+            itemString += `
+                          ${item.description}
+                          <br>
+                          <br>
+                      `;
+          }
+
           itemString += `
-                        ${item.description}
-                        <br>
-                        <br>
-                    `;
-        }
-
-        itemString += `
-                            ${item.time}
-                            <br>
-                            ${item.location}
-                        </div>
+                              ${item.time}
+                              <br>
+                        `;
+          if (isLink) {
+            itemString += `
+            Location: <a target="_blank" href="${location}">${location}<a>
                     </div>
-                </div>`;
-        eventsContainer.insertAdjacentHTML("beforeend", itemString);
+                </div>
+            </div>`;
+          } else {
+            itemString += `
+            Location: ${location}
+                    </div>
+                </div>
+            </div>`;
+          }
+
+          eventsContainer.insertAdjacentHTML("beforeend", itemString);
+        }
       }
     }
   };

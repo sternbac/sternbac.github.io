@@ -26,7 +26,8 @@ function get_month_name(monthNumber) {
 }
 
 (() => {
-  const api = "//bac-backend.herokuapp.com/calendar/0";
+  // const api = "//bac-backend.herokuapp.com/calendar/0";
+  const api = "http://localhost:3000/calendar/0";
   const req = new XMLHttpRequest();
 
   let monthDict = {};
@@ -42,30 +43,51 @@ function get_month_name(monthNumber) {
           entry.title !== "Weekly BAC Meeting"
         ) {
           let _monthContainer = document.getElementById(`${entry.month}`);
+          const location = entry.location.slice(10);
+          let prefix = "Location: ";
+          let isLink = false;
+
+          if (location.includes("http")) {
+            isLink = true;
+          }
+
+          if (location.includes("bit")) {
+            prefix = "Recording: ";
+          }
+
           let eventString = `
-                        <div class="content-block-container">
-                            <div class="content-block">
-                                <div class="content-block-header">
-                                    ${entry.title}
-                                </div>
-                                <div class="content-block-body">
-                        `;
+                          <div class="content-block-container">
+                              <div class="content-block">
+                                  <div class="content-block-header">
+                                      ${entry.title}
+                                  </div>
+                                  <div class="content-block-body">
+                          `;
 
           if (entry.description !== undefined) {
             eventString += `
-                            ${entry.description}
-                            <br>
-                            <br>
-                        `;
+                              ${entry.description}
+                              <br>
+                              <br>
+                          `;
           }
-
-          eventString += `
-                                ${entry.time}
-                                <br>
-                                ${entry.location}
-                            </div>
-                        </div>
-                    </div>`;
+          if (isLink) {
+            eventString += `
+                ${entry.time}
+                <br>
+                ${prefix} <a target="_blank" href="${location}">${location}<a>
+                </div>
+              </div>
+            </div>`;
+          } else {
+            eventString += `
+                ${entry.time}
+                <br>
+                ${prefix} ${location}<a>
+                </div>
+              </div>
+            </div>`;
+          }
           _monthContainer.insertAdjacentHTML("beforeend", eventString);
         }
       }
