@@ -42,16 +42,18 @@ function get_month_name(monthNumber) {
           entry.title !== "Weekly BAC Meeting"
         ) {
           let _monthContainer = document.getElementById(`${entry.month}`);
-          const location = entry.location.slice(10);
+          let location = entry.location.slice(10);
           let prefix = "Location: ";
           let isLink = false;
 
-          if (location.includes("http")) {
-            isLink = true;
-          }
-
           if (location.includes("bit")) {
-            prefix = "Recording: ";
+            isLink = true;
+            if (!location.includes("stern")) {
+              prefix = "Recording: ";
+            }
+            if (!location.includes("https")) {
+              location = "https://" + location;
+            }
           }
 
           let eventString = `

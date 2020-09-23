@@ -23,9 +23,15 @@
         for (let i = 0; i < items.length; i++) {
           const item = items[i];
           let isLink = false;
-          const location = item.location.slice(10);
-          if (location.includes("http")) {
+          let location = item.location.slice(10);
+          if (location.includes("bit")) {
             isLink = true;
+            if (!location.includes("stern")) {
+              prefix = "Recording: ";
+            }
+            if (!location.includes("https")) {
+              location = "https://" + location;
+            }
           }
 
           let itemString = `
