@@ -130,6 +130,7 @@
 }
 
 .dropdown-header {
+  cursor: pointer;
   font-size: 25px;
   color: #374c60;
   text-align: left;
