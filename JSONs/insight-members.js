@@ -51,7 +51,7 @@ var insightMembers =
             {
                 name: "Samyak Sawale",
                 pos: "Member",
-                img: "Samyak_Sawale.jpg",
+                img: "Samyak_Sawale.JPG",
             },
             {
                 name: "Shannon Huang",
@@ -114,12 +114,12 @@ var insightMembers =
             {
                 name: "Katharina Eibel",
                 pos: "Data Analyst",
-                img: "Katharina_Eibel.jpg",
+                img: "Katharina_Eibel.JPG",
             },
             {
                 name: "Manuela Rodriguez",
                 pos: "Data Analyst",
-                img: "Manuela_Rodriguez.jpg",
+                img: "Manuela_Rodriguez.JPG",
             },
             {
                 name: "Meg Cui",
