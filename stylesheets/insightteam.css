@@ -1,122 +1,252 @@
 #about {
-    background-color: #374C60;
-    margin: 40px 0;
+  background-color: #374c60;
+  margin: 40px 0;
 }
 
 #about-content {
-    padding: 15px 50px 30px 50px;
-    color: white;
-    font-size: 18px;
-    max-width: 600px;
-    margin: auto;
+  padding: 15px 50px 30px 50px;
+  color: white;
+  font-size: 18px;
+  max-width: 600px;
+  margin: auto;
 }
 
 #insight-teams {
-    margin: 40px 0;
+  margin: 40px 0;
 }
 
-.white{
-    color:white;
+#insight-members {
+  margin: 40px 0;
+}
+
+.white {
+  color: white;
 }
 
 .team-header {
-    font-size: 22px;
-    color:#374C60;
-    text-align: center;
-    height: 50px;
-    line-height: 50px;
-    background-color: #eeeeee;
-    padding: 0 20px;
-    font-weight: bold;
-    width: 100%;
-    box-sizing: border-box;
+  font-size: 22px;
+  color: #374c60;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  background-color: #eeeeee;
+  padding: 0 20px;
+  font-weight: bold;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-#past-projects {
-    background-color: #374C60;
-    box-sizing: border-box;
-    padding: 10px;
-    min-height: 150px;
-    margin: 40px 0;
+.projects {
+  /* Needed for animation effects via JS */
+  height: 0px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 1s ease;
+  opacity: 0;
 }
 
-.projects{ /* Needed for animation effects via JS */
-    height: 0px;
-    overflow: hidden;
-    width:100%;
-    box-sizing: border-box;
-    transition: all 1s ease;
-    opacity: 0;
+.dropdown-content {
+  /* Needed for animation effects via JS */
+  height: 0px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 1s ease;
+  opacity: 0;
 }
 
 .showing {
-    height: auto;
-    overflow: auto;
-    opacity: 1;
+  height: auto;
+  overflow: auto;
+  opacity: 1;
 }
 
 .project {
-    height: auto;
-    border-top: 2px solid #1AB999;
-    padding-left: 30px;
-    background-color: #eeeeee;
-    box-sizing: border-box;
-    line-height: 40px;
-    font-size: 20px;
+  height: auto;
+  border-top: 2px solid #1ab999;
+  padding-left: 30px;
+  background-color: #eeeeee;
+  box-sizing: border-box;
+  line-height: 40px;
+  font-size: 20px;
 }
-.project:nth-child(5n){
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+.project:nth-child(5n) {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
-
 
 #insight-teams-display .member:nth-child(3n) {
-    background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 #insight-teams-display .member:nth-child(3n + 1) {
-    background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 #insight-teams-display .member:nth-child(3n + 2) {
-    background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .insight-team {
-    width: 80%;
-    margin: 20px auto 0 auto;
-    display: block;
-    max-width: 600px;
+  width: 90%;
+  margin: 20px auto 0 auto;
+  display: block;
+  max-width: 600px;
+  height: 100%;
+}
+
+.section {
+  background-color: #eeeeee;
+  margin-bottom: 30px;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.section-header {
+  font-size: 30px;
+  color: #374c60;
+  text-align: left;
+  min-height: 50px;
+  font-weight: medium;
+  background-color: #eeeeee;
+  padding: 0 25px;
+}
+
+.dropdown-header {
+  font-size: 25px;
+  color: #374c60;
+  text-align: left;
+  min-height: 50px;
+  line-height: 50px;
+  background-color: #eeeeee;
+  padding: 0 15px;
+  font-weight: bold;
+}
+
+.active-dropdown {
+  color: black;
+  background-color: #1ab999;
 }
 
 .insight-team-header {
-    font-size: 22px;
-    /* color: #374C60; */
-    color: black;
-    text-align: center;
-    background-color: #eeeeee;
-    padding: 0 20px;
-    font-weight: bold;
-    width: 100%;
-    box-sizing: border-box;
-    border: 2px solid #374C60;
-    /* border-left: 2px solid #374C60;
-    border-right: 2px solid #374C60; */
-    background-color: #1AB999;
-    padding: 20px;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  background-color: #eeeeee;
+  padding: 0 20px;
+  font-weight: bold;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #374c60;
+  background-color: #1ab999;
+  padding: 10px;
+  height: 125px;
 }
 
 .insight-team-by {
-    font-size: 18px;
-    margin-top: 30px;
-    display: block;
+  font-size: 18px;
+  margin-top: 20px;
+  display: block;
+  font-weight: normal;
 }
 
 .insight-team-photo {
+  width: 100%;
+  /* border-top: 2px solid #1AB999; */
+  border-left: 2px solid #374c60;
+  border-right: 2px solid #374c60;
+  border-bottom: 2px solid #374c60;
+  box-sizing: border-box;
+}
+.profile-photo {
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.profile-photo-small {
+  width: 60%;
+  box-sizing: border-box;
+}
+
+.profile {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0 20px 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.wrapper-small {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+  .wrapper-small {
+    grid-template-columns: 1fr;
+  }
+  .profile-photo-small {
+    width: 80%;
+    box-sizing: border-box;
+  }
+}
+
+/* #past-projects {
+  background-color: #374c60;
+  box-sizing: border-box;
+  padding: 10px;
+  min-height: 150px;
+  margin: 40px 0;
+} */
+
+.semester {
+  width: 100%;
+  border-radius: 5px;
+  text-align: left;
+  /* margin: 10px auto; */
+  /* max-width: 800px; */
+}
+
+@media only screen and (max-width: 414px) {
+  .semester {
     width: 100%;
-    /* border-top: 2px solid #1AB999; */
-    border-left: 2px solid #374C60;
-    border-right: 2px solid #374C60;
-    border-bottom: 2px solid #374C60;
-    box-sizing: border-box
+  }
+}
+
+.semester-icon,
+.semester-text {
+  display: inline-block;
+  font-size: 25px;
+  line-height: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+
+.pressed-semester {
+  background-color: #1ab999;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }

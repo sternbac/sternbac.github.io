@@ -1,6 +1,6 @@
 var insightTeams =
     {
-        teams: [
+        new: [
             {
                 name: "Predicting Hotel Cancellations",
                 by: "Eric Zhao, Alex Rudra, Sienna Zhu, Melody Lam, Brett Lin",
@@ -14,7 +14,7 @@ var insightTeams =
                 href: "https://drive.google.com/open?id=1PoK319T9HqJ7QBe7EW98Ve_jGtQ4MxTa"
             },
             {
-                name: "Predicting Injury in Motor Vehicle Crashes",
+                name: "Predicting Injury in Vehicle Crashes",
                 by: "Jason Liu, Jeffrey Li, Sofie Schwallie, Ashwin Mathukumar",
                 img: "Traffic.png",
                 href: "https://drive.google.com/open?id=1G13XvVtRN4qShGMQHz9sGmHKf_Ahv8IJ"
