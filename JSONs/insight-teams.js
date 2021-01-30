@@ -4,19 +4,19 @@ var insightTeams =
             {
                 name: "New York City Property Pricing",
                 by: "Eric Zhao, Shannon Huang, Arjan Kang, Shivam Patel",
-                img: "Hotel.png",
+                img: "NYC Properties Title Page.png",
                 href: "https://drive.google.com/file/d/1DPTOlV9VU58bO315HvuPwqPx86pD-OSt/view?usp=sharing"
             },
             {
                 name: "Steam User Behavior",
                 by: "Sienna Zhu, Sophie Zhu, Chloe Chen, Brayden Moore",
-                img: "Kickstarter.png",
+                img: "Steam Title Page.png",
                 href: "https://drive.google.com/file/d/1ZP7g0QAevva43-5pD6GaTrk45glrHw80/view?usp=sharing"
             },
             {
                 name: "Mortgage Application Prescreening",
                 by: "Pratyush Kundu, Efe Dikmen, Amanda He, Samyak Sawale",
-                img: "Traffic.png",
+                img: "Mortgage Title Page.png",
                 href: "https://drive.google.com/file/d/1t94twKtQVA3d7qIMra85djiOZwAk94ID/view?usp=sharing"
             }
         ],
@@ -24,19 +24,19 @@ var insightTeams =
             {
                 name: "Accern",
                 by: "Jason Liu, Ashwin Mathakumar, Katharina Eibel, Jack Wang, Eric Zhao",
-                img: "Pepper.png",
+                img: "Accern Title Page.png",
                 href: "https://drive.google.com/file/d/1N-ZIfbZF3gyHMeWIQAi6sy_jDoDRyGba/view?usp=sharing"
             },
             {
                 name: "Netflix Unsupervised Learning",
                 by: "Vanessa Ting, Meg Cui, Pratyush Kundu, James Li",
-                img: "Boosting.png",
+                img: "Netflix Title Page.png",
                 href: "https://drive.google.com/file/d/1CEZJX2wb6q98wzluCVe_7vlQJAVrYLuP/view?usp=sharing"
             },
             {
                 name: "Gravy",
-                by: "Pratyush Kundu, Matthew Zhang, Nicole Ng, Poorav Desai, Katharina Eibel",
-                img: "Sharemeals.png",
+                by: "Jeffrey Liu, Manuela Rodriguez, Melody Lam, Brett Lin, Sofia Schwallie",
+                img: "Gravy Title Page.png",
                 href: "https://drive.google.com/file/d/18Qxq3HEGxR3xsyVTgik5xj4BLs6oWKku/view?usp=sharing"
             }
         ]

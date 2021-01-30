@@ -1,11 +1,11 @@
 var board = {
 	"board": [
         {
-			"name": "Jonathan Edelstein",
+			"name": "Eeshaan Rao",
 			"title": "Co-President",
-			"school": "Stern Class of 2021",
+			"school": "Stern Class of 2022",
 			"degree": "B.S. Finance & Data Science",
-			"img": "jonathan.jpg"
+			"img": "eeshaan.jpg"
 		},
 		{
 			"name": "Adwyn Viera",
@@ -15,18 +15,32 @@ var board = {
 			"img": "adwyn.jpg"
 		},
 		{
-			"name": "Lawrence Langman",
-			"title": "Vice President",
-			"school": "Stern Class of 2021",
+			"name": "Jason Liu",
+			"title": "Co-VP of Insight Team",
+			"school": "Stern Class of 2022",
 			"degree": "B.S. Finance & Computer Science",
 			"img": "lawrence.png"
 		},
         {
-			"name": "Eeshaan Rao",
-			"title": "VP of Insight Team",
+			"name": "Manuela Rodriguez",
+			"title": "Co-VP of Insight Team",
+			"school": "Stern Class of 2022",
+			"degree": "B.S. Finance & Computer Science",
+			"img": "manuela.jpg"
+		},
+		{
+			"name": "Efe Dikmen",
+			"title": "VP of Workshops",
 			"school": "Stern Class of 2022",
 			"degree": "B.S. Finance & Data Science",
-			"img": "eeshaan.jpg"
+			"img": "efe.jpg"
+		},
+		{
+			"name": "Marina Chang",
+			"title": "VP of Operations",
+			"school": "Stern Class of 2023",
+			"degree": "B.S. Finance & Data Science",
+			"img": "marina.jpg"
 		},
 		{
 			"name": "Jack Wang",
@@ -36,68 +50,39 @@ var board = {
 			"img": "jack.jpg"
 		},
 		{
-			"name": "Neila Zniber",
-			"title": "VP of Operations",
-			"school": "Stern Class of 2021",
-			"degree": "B.S. Statistics & Data Science",
-			"img": "neila.jpg"
+			"name": "Selena Ke",
+			"title": "VP of Marketing",
+			"school": "Stern Class of 2022",
+			"degree": "B.S. Finance & Data Science",
+			"img": "selena.jpg"
+		},
+		{
+			"name": "Sumantro Banerjee",
+			"title": "VP of TechSocials",
+			"school": "Stern Class of 2023",
+			"degree": "B.S. Computing & Data Science",
+			"img": "sumantro.jpg"
 		},
 		{
 			"name": "Sanjana Behare",
-			"title": "VP of Tech Updates",
+			"title": "Treasurer",
 			"school": "Stern Class of 2023",
-			"degree": "B.S. Finance & Computer Science",
+			"degree": "B.S. Finance & Data Science",
 			"img": "sanjana.jpg"
 		},
 		{
-			"name": "Efe Dikmen",
-			"title": "VP of Tech News",
+			"name": "Ana Martinez",
+			"title": "Secretary",
 			"school": "Stern Class of 2022",
 			"degree": "B.S. Finance & Data Science",
-			"img": "efe.jpg"
-		},
-		{
-			"name": "Ana Martinez",
-			"title": "Co-VP of Marketing",
-			"school": "Stern Class of 2022",
-			"degree": "B.S. Marketing & Data Science",
 			"img": "ana.jpg"
 		},
 		{
-			"name": "Marina Chang",
-			"title": "Co-VP of Marketing",
+			"name": "Eric Zhao",
+			"title": "Webmaster",
 			"school": "Stern Class of 2023",
 			"degree": "B.S. Finance & Data Science",
-			"img": "marina.jpg"
-		},
-		{
-			"name": "Nihar Shah",
-			"title": "Treasurer",
-			"school": "Stern Class of 2021",
-			"degree": "B.S. Finance, Statistics, & CS",
-			"img": "nihar.jpg"
-		},
-		{
-			"name": "Aj Subudhi",
-			"title": "Secretary",
-			"school": "Stern Class of 2021",
-			"degree": "B.S. Statistics, Data Science, & Math",
-			"img": "aj.jpg"
-		},
-		{
-			"name": "Janet Huang",
-			"title": "VP of Workshops & Webmaster",
-			"school": "Stern Class of 2022",
-			"degree": "B.S. Statistics & Computer Science",
-			"img": "janet.jpg"
-		},
-		{
-			"name": "",
-			"title": "",
-			"school": "",
-			"degree": "",
-			"img": ""
-		}
-		
+			"img": "eric.jpg"
+		}		
 	]
 };
