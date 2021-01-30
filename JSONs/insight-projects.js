@@ -88,6 +88,24 @@ var insightProjects =
                         href: "https://drive.google.com/open?id=14vQZmh_N6a9zY9TLTvnZEJf-RjyI4qSH"
                     }
                 ]
+            },
+            {
+                "id": "s20",
+                "semester": "Spring 2019",
+                "projects": [
+                    {
+                        text : "Predicting Hotel Cancellations",
+                        href: "https://drive.google.com/open?id=1R1v7Kyuba-NMYwjMOBNuBgmM1_ukzm-4"
+                    },
+                    {
+                        text : "Kickstarter",
+                        href: "https://drive.google.com/open?id=1PoK319T9HqJ7QBe7EW98Ve_jGtQ4MxTa"
+                    },
+                    {
+                        text : "Predicting Injury in Vehicle Crashes",
+                        href: "https://drive.google.com/open?id=1G13XvVtRN4qShGMQHz9sGmHKf_Ahv8IJ"
+                    }
+                ]
             }
         ]
     };
