@@ -19,7 +19,7 @@ var board = {
 			"title": "Co-VP of Insight Team",
 			"school": "Stern Class of 2022",
 			"degree": "B.S. Finance & Computer Science",
-			"img": "jason.png"
+			"img": "jason.jpg"
 		},
         {
 			"name": "Manuela Rodriguez",
